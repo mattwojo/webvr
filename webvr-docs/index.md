@@ -1,4 +1,5 @@
 ---
+layout: LandingPage
 title: WebVR Developer's Guide
 description: Guide to working with WebVR in Mixed Reality experiences.
 author: <!-- GitHub alias -->
@@ -10,6 +11,7 @@ keywords: developer guide
 ---
 
 # WebVR Developer's Guide
+WebVR is an open standard that makes it possible to experience VR in your browser. 
 
 <ul class="panelContent cardsFTitle">
     <li>
