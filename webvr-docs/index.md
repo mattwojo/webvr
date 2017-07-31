@@ -75,7 +75,7 @@ WebVR is an open standard that makes it possible to experience VR in your browse
 
 <h2>Reference</h2>
 
-<ul class="panelContent cardsW">
+<ul class="panelContent cardsFTitle">
         <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality">
         <div class="cardSize">
