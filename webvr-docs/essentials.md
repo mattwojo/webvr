@@ -1,4 +1,4 @@
---
+---
 title: WebVR Essentials
 description: WebVR essentials include inclusive features and capability detection, automatically entering VR on page load, and plugging in HMD.
 author: leweaver
