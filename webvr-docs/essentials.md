@@ -1,7 +1,7 @@
----
+--
 title: WebVR Essentials
 description: WebVR essentials include inclusive features and capability detection, automatically entering VR on page load, and plugging in HMD.
-author: <!-- GitHub alias -->
+author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
@@ -9,7 +9,12 @@ ms.prod: webvr
 keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
 ---
 
+This article contains some best practices that will make your WebVR experience work well across all WebVR enabled browsers and devices, with minimal effort!
+
 # WebVR Essentials
+- Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
+- Assume that `navigator.getVRDisplays` is always present in the browser; you must make a call to that function to determine if a VRDisplay is actually connected. The getVRDisplays promise will reject on systems that do not natively support MR.
+-	Users may plug in their headset after the page has loaded, or disconnect & reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
 
 ## Inclusive Feature and Capability Detection
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet.
@@ -40,8 +45,9 @@ The button should have one of 3 possible states:
 The logic to determine which of these three states the button is in is summarized below, with some reference javascript code: 
 - If `navigator.getVRDisplays` method DOESN'T EXIST, hide the button.
 - If `navigator.getVRDisplays` method EXISTS, show the button
-  - If calling the method returns 0 displays, disable the button.
-  - If calling the method returns 1 (or more) VRDisplays, enable the button.
+  - If promise fulfils with 0 displays, disable the button.
+  - If promise fulfils with 1 (or more) VRDisplays, enable the button.
+  - If promise rejects, hide the button.
 
 ```javascript
 // Returns a promise that will resolve with the name of the state in which to put the button. One of: hidden, disabled, enabled
@@ -58,23 +64,6 @@ function calculateButtonState() {
     // This browser does not support WebVR at all.
     return Promise.resolve('hidden');
   }
-}
-```
-
-## Automatically entering VR when the page loads
-__Important:__ not all platforms support this. Always provide an Enter VR button as well.
-
-In browsers that do not require the page to call `requestPresent` from within the context of a user initiated action, it is possible to make the call at any time. Thus, to attempt to enter VR immedately, simply place a call to `requestPresent` after initialization completes.
-
-```javascript
-// On page load, simply make a call to your standard enterVR method
-function onPageLoadEventHandler() {
-  initWebGL();
-  enterVR();
-}
-// Remember to provide a button fallback
-function onEnterVRButtonPress() {
-  enterVR();
 }
 ```
 
@@ -111,5 +100,24 @@ function onPageLoadEventHandler() {
 }
 function setEnterVRButtonState(state) {
   // Apply CSS classes, show/hide help text, etc.
+}
+```
+
+# Advanced Features
+
+## Automatically entering VR when the page loads
+__Important:__ not all platforms support this. Always provide an Enter VR button as well.
+
+In browsers that do not require the page to call `requestPresent` from within the context of a user initiated action, it is possible to make the call at any time. Thus, to attempt to enter VR immedately, simply place a call to `requestPresent` after initialization completes.
+
+```javascript
+// On page load, simply make a call to your standard enterVR method
+function onPageLoadEventHandler() {
+  initWebGL();
+  enterVR();
+}
+// Remember to provide a button fallback
+function onEnterVRButtonPress() {
+  enterVR();
 }
 ```
