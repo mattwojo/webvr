@@ -1,7 +1,7 @@
----
+--
 title: Input
 description: Input is used to convert a cinematic experience into an compelling interactive one by allowing a user to alter the state of the world around them. 
-author: <!-- GitHub alias -->
+author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
