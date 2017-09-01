@@ -15,42 +15,6 @@ WebVR is an open standard that makes it possible to experience VR in your browse
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="./usercomfort.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_code-quality.svg" alt="User Comfort Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>User Comfort</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="./input.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_tools.svg" alt="Input Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Input</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
         <a href="./essentials.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -131,17 +95,17 @@ WebVR is an open standard that makes it possible to experience VR in your browse
         </a>
     </li>
     <li>
-        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/hololens_hardware_details">
+        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/Using_WebVR_in_Edge_with_Windows_Mixed_Reality">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="HoloLens icon" />
+                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="Immersive headset icon" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>HoloLens hardware details</h3>
+                        <h3>Using WebVR in Microsoft Edge</h3>
                     </div>
                 </div>
             </div>
