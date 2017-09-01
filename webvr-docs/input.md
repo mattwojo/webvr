@@ -1,4 +1,4 @@
---
+<!--
 title: Input
 description: Input is used to convert a cinematic experience into an compelling interactive one by allowing a user to alter the state of the world around them. 
 author: leweaver
@@ -7,7 +7,7 @@ ms.date: 08/01/2017
 ms.topic: article
 ms.prod: webvr
 keywords: WebVR Input
----
+-->
 
 # Input
 Input is one of the toughest things to get right in VR, but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an compelling interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers and multiple user steps.
