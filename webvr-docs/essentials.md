@@ -157,3 +157,7 @@ function onEnterVRButtonPress() {
   enterVR();
 }
 ```
+
+Embedded CodePen sample: 
+<iframe height='300' scrolling='no' title='Hello World — A-Frame' src='//codepen.io/mozvr/embed/BjygdO/?height=300&theme-id=23761&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/mozvr/pen/BjygdO/'>Hello World — A-Frame</a> by mozillavr (<a href='https://codepen.io/mozvr'>@mozvr</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe> 
