@@ -22,6 +22,8 @@ The Microsoft Edge browser (build 15002+) now supports immersive 3D Virtual Real
 - Display 360º panoramic images.
 - Engage users with 3D interfaces and game controllers.
 
+**[Test it below](#test-webvr-support-with-your-headset) or [see some demos](demos.md).*
+
 ## Goals of the WebVR API*
 - Detect available Virtual Reality devices.
 - Query the devices capabilities.
@@ -34,9 +36,15 @@ The Microsoft Edge browser (build 15002+) now supports immersive 3D Virtual Real
 
 The CodePen embedded below should enable you to test support for your VR headset with the Microsoft Edge. Just click the headset icon below.
 
-<iframe height='265' scrolling='no' title='WebVR experiment' src='//codepen.io/mattwojo/embed/preview/Evqjpx/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/mattwojo/pen/Evqjpx/'>WebVR test</a> (<a href='https://codepen.io/mattwojo'></a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='265' scrolling='no' title='WebVR experiment' src='//codepen.io/mattwojo/embed/Evqjpx/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/mattwojo/pen/Evqjpx/'>WebVR on Microsoft Edge</a>.
 </iframe>
 
+Or try viewing this 360-degree photograph from the middle of Greenlake in Seattle, WA.
+
+<iframe height='265' scrolling='no' title='WebVR 360 image' src='//codepen.io/mattwojo/embed/qPWKdg/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/mattwojo/pen/qPWKdg/'>WebVR 360 image</a>.
+</iframe>
+
+We used [A-Frame](https://aframe.io), a web framework for building VR experiences, to set up these simple VR tests and embedded them using [CodePen](https://codepen.io/).
 
 ## WebVR and WebGL
 If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive demos utilizing WebVR and WebGL coming soon.
