@@ -2,7 +2,7 @@
 layout: LandingPage
 title: WebVR Developer's Guide
 description: Guide to working with WebVR in Mixed Reality experiences.
-author: <!-- GitHub alias -->
+author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
