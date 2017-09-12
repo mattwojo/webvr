@@ -21,7 +21,7 @@ The following checklist is split into four categories. Meeting all points in thi
 -	Users may plug in their headset after the page has loaded, or disconnect and reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
 
 ## Hybrid
-The 1.1 specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
+The [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/) specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
 - [correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
 - if the page does not handle webglcontextrestored correctly, ensure that handlers to webglcontextlost do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
