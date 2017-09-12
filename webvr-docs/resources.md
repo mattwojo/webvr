@@ -1,3 +1,4 @@
+
 ---
 title: Resources
 description: Resources and Links. 
@@ -11,6 +12,16 @@ keywords: WebVR Resources Links
 
 # Resources
 
+## Videos
+
+<iframe src="https://channel9.msdn.com/Events/Build2017/T6987/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
+<iframe src="https://channel9.msdn.com/Events/Build2017/P4097/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
+
+## Links
+
+* [From zero to hero, creating WebVR experiences with Babylon.js](https://www.davrous.com/2017/07/07/from-zero-to-hero-creating-webvr-experiences-with-babylon-js-on-all-platforms/)
 * [Using WebVR in Edge](https://developer.microsoft.com/en-us/windows/mixed-reality/using_webvr_in_edge_with_windows_mixed_reality)
 * [WebVR info](https://webvr.info/developers) - information for developers
 * [WebVR Rocks ](https://webvr.rocks) - list of supported browsers
