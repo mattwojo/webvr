@@ -25,11 +25,11 @@ Learn more about WebVR by watching these presentations from Build 2017.
 
 <i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
 
-> [!VIDEO https://www.youtube.com/watch?v=1nlcdDNOdm8]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allowfullscreen></iframe>
 
 <i>Using motion controllers.</i>
 
-> [!VIDEO https://youtu.be/_xpI0JosYUk]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_xpI0JosYUk" frameborder="0" allowfullscreen></iframe>
 
 <i>Introducing Mixed Reality.</i>
 
