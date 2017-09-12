@@ -25,6 +25,16 @@ Learn more about WebVR by watching these presentations from Build 2017.
 
 <i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
 
+> [!VIDEO https://www.youtube.com/watch?v=1nlcdDNOdm8]
+
+<i>Using motion controllers.</i>
+
+> [!VIDEO https://youtu.be/_xpI0JosYUk]
+
+<i>Introducing Mixed Reality.</i>
+
+## WebVR and WebGL
+If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive demos utilizing WebVR and WebGL coming soon.
 
 
 ## Links

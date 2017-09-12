@@ -46,9 +46,3 @@ Or try viewing this 360-degree photograph from the middle of Greenlake in Seattl
 
 We used [A-Frame](https://aframe.io), a web framework for building VR experiences, to set up these simple VR tests and embedded them using [CodePen](https://codepen.io/).
 
-## WebVR and WebGL
-If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive demos utilizing WebVR and WebGL coming soon.
-
-## Related videos
-MR motion controllers video: https://www.youtube.com/watch?v=1nlcdDNOdm8
-Mixed Reality blends physical and virtual spaces (what is mixed reality?): https://youtu.be/_xpI0JosYUk 
