@@ -14,9 +14,12 @@ keywords: WebVR Resources Links
 
 ## Videos
 
-<iframe src="https://channel9.msdn.com/Events/Build2017/T6987/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+ [!VIDEO https://channel9.msdn.com/Events/Build/2017/P4097/player]
 
-<iframe src="https://channel9.msdn.com/Events/Build2017/P4097/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
+[!VIDEO https://channel9.msdn.com/Events/Build/2017/T6987/player]
+
+
 
 
 ## Links
