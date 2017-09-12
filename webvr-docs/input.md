@@ -10,9 +10,9 @@ keywords: WebVR Input
 ---
 
 # Input
-Input is one of the toughest things to get right in VR, but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers.
+Input is one of the toughest things to get right in virtual reality (VR), but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers.
 
-In WebVR 1.1, a site will most likely expect visitors to be limited to using only one of the following input methods due to their device.
+In [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/), a site will most likely expect visitors to be limited to using only one of the following input methods due to their device.
 
 - Mouse
 - Gamepad
@@ -24,20 +24,14 @@ Let's dig in to how to handle each input device and see how all these devices ca
 
 
 ## Mouse
-Since a person wearing an HMD can’t actually see what they are doing with an unrestricted mouse, it would be very easy for them to accidently click on things they don’t intend to – the browser close button, other windows or the operating system interface. In a worst case this could potentially lead to things such as an accidental format of a hard drive! For this reason, Microsoft Edge disables unrestricted mouse input when an immersive VR session is started and the headset presence sensor is covered (you’ll see the Win+Alt+I banner visible on your monitor when this is the case). This is the behavior for all apps in Windows Mixed Reality and is not unique to WebVR.
+Since a person wearing a head mounted display (HMD) can’t actually see what they are doing with an unrestricted mouse, it would be very easy for them to accidently click on things they don’t intend to i.e the browser close button, other windows, or the operating system interface. For this reason, Microsoft Edge disables unrestricted mouse input when an immersive VR session is started and the headset presence sensor is covered (you’ll see the Win+Alt+I banner visible on your monitor when this is the case). This is the behavior for all apps in Windows Mixed Reality and is not unique to WebVR.
 
-The safest way to handle mouse input when in an immersive WebVR session is to use the [pointerlock API](https://msdn.microsoft.com/en-us/library/mt560346.aspx). There are two events on the WebVR spec that are specifically designed to make this easy – they are fired at the appropriate times when the page enters VR, HMD presence sensor detects changes and any number of other reasons input focus would change: [vrdisplaypointerrestricted](https://msdn.microsoft.com/en-us/library/mt801974) and [vrdisplaypointerunrestricted](https://msdn.microsoft.com/en-us/library/mt801975) (also see the WebVR 1.1 spec [event descriptions](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event)). In response to the former you can request pointerlock to get mouse input.
+The safest way to handle mouse input when in an immersive WebVR session is to use the [pointerlock API](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API). There are two events in the WebVR spec that are specifically designed to make this easy – [`vrdisplaypointerrestricted`](https://msdn.microsoft.com/en-us/library/mt801974) and [`vrdisplaypointerunrestricted`](https://msdn.microsoft.com/en-us/library/mt801975). They are fired at the appropriate times when the page enters VR, the HMD presence sensor detects changes, or any number of other reasons input focus would change.
 
-To remain compatible with browsers that do not fire those events, it is still a good idea to also request pointerlock just prior to calling requestPresent for the user safety reasons mentioned above. 
+To remain compatible with browsers that don't fire those events, it's still a good idea to also call [`requestPointerLock`](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestPointerLock) just prior to calling [`requestPresent`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/requestPresent) for the user safety reasons mentioned above. 
+ 
 
-
-The only way to get mouse input while presenting to a VRDisplay is to request pointerlock. This should be done at two places: 
-- Just before making a call to VRDisplay.requestPresent
-- In response to a vrdisplaypointerrestricted event, which is called whenever mouse input context changes from HMD to Monitor (such as uncovering the presence sensor on a Windows Mixed Reality headset)
-
-
-
-The below snippet shows an example of safely using pointerlock to handle mouse down events. 
+The below snippet shows an example of safely using pointerlock to handle mouse down events. Here we see the pointerlock being requested just before calling `requestPresent` and in response to a `vrdisplayrestricted` event which is called whenever mouse input context changes from HMD to Monitor (such as uncovering the presence sensor on a Windows Mixed Reality headset).
 
 <iframe height='279' scrolling='no' title='Pointerlock webvr' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/xXKagP/?height=279&theme-id=31247&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xXKagP/'>Pointerlock webvr</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -77,11 +71,12 @@ function tryRequestPresent() {
 ```
 
 ## Gamepad
-Traditional, 0DOF, 3DOF & 6DOF controllers are all exposed via the navigator.getGamepads() array. Since the specification does not state anything about a minimum or maximum length for the array, nor the order in which elements appear, it is safest to assume all browser vendors implement it differently (and guess what, they do!).
+Traditional, 0DOF, 3DOF, and 6DOF controllers are all exposed via the [`navigator.getGamepads`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads) array. Since the [gamepad spec](https://w3c.github.io/gamepad/#dom-navigator-getgamepads) doesn't state anything about a minimum or maximum length for this array, nor the order in which elements appear, it is safest to assume all browsers implement it differently (and guess what, they do!).
 
-It is especially important when dealing with gamepads to make no assumptions whatsoever on the type, ordering or number of devices that will be returned returned in the array. As an example, Windows Mixed Reality users may be using [motion controllers](https://developer.microsoft.com/en-us/windows/mixed-reality/motion_controllers) or a gamepad to navigate the browser in VR; they will expect those controllers to continue working once they enter a WebVR immersive session. 
 
-You experience can easily determine the capability of all of the plugged in devices using the [pose](https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface) property on the gamepad. It is bad practice to to look at the `gamepad.id` property for this purpose.
+It's especially important when dealing with gamepads to make no assumptions on the type, ordering, or number of devices that will be returned in the array. For example, Windows Mixed Reality users may be using [motion controllers](https://developer.microsoft.com/en-us/windows/mixed-reality/motion_controllers) or a gamepad to navigate the browser in VR; they will expect those controllers to continue working once they enter a WebVR immersive session. 
+
+Your experience can determine the capability of all of the plugged in devices using the [`pose`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/pose) property of the gamepad. It is bad practice to look at the [`gamepad.id`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id) property for this purpose.
 
 ```javascript
 if (gamepad.mapping === 'standard')
@@ -95,54 +90,54 @@ else
 ```
 
 ### Controller buttons
-_TL;DR:_ 
+
 * There is a lot of variation between hardware
 * Supporting both [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]) gives users choice of input device
-* Commit if gamepad buttons 0 or 1 are pressed _(check that the buttons exist)_
+* Commit if gamepad buttons 0 or 1 are pressed (check that the buttons exist)
 * Relying on controllers with lots of buttons reduces your target audience, unless you provide an alternative input method
 
-Traditional gamepad button mappings are [well documented](https://www.w3.org/TR/gamepad/#remapping) in the W3C specification. You can be sure that a gamepad is using that configuration only by reading the [Gamepad.mapping](https://www.w3.org/TR/gamepad/#dfn-mapping) property:
+Traditional gamepad button mappings are [documented](https://www.w3.org/TR/gamepad/#remapping) in the W3C specification. You can make sure a gamepad is using this configuration by reading the [Gamepad.mapping](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/mapping) property:
 
 ```javascript
 if (gamepad.mapping === 'standard') console.log(gamepad.id + ' is a traditional gamepad');
 ```
 
-Things get interesting with all of the VR Controllers since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the specification for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
+Things get interesting with all of the VR Controllers since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the spec for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
 
 >  It is recommended that buttons appear in decreasing importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
 
-It is convention that the trigger on many 6DOF controllers is the primary, "most important" button, however controllers in WebVR 1.1 is always place the trigger at index 1 if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
+It is convention that the trigger on many 6DOF controllers is the primary, "most important" button. However, controllers in WebVR 1.1 always place the trigger at index `1` if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
 
-There is no way in the current WebVR 1.1 API to reliably determine whether or not a controller has trigger. For gaze-and-commit or point-and-commit, it is recommended to listen for a primary (select) action on both button index 0 and 1. (_be careful with the button array size, the controller may not have a button defined at index 1_)
+There's no way in the current WebVR 1.1 API to reliably determine whether or not a controller has a trigger. For gaze-and-commit or point-and-commit, it is recommended to listen for a primary "select" action on both button index `0` and `1`. 
+
+>[!NOTE]
+> Be careful with the button array size. The controller may not have a button defined at index `1`.
 
 Known controllers and their mappings:
-<!-- This should be converted into a markdown table -->
-<table>
-  <tr><th></th><th>Windows Mixed Reality </th><th>Oculus Touch</th><th>Vive controller</th><th>GearVR controller</th><th>Oculus Remote</th><th>Daydream Controller</th><th>GearVR headset</th></tr>
-  <tr><th>  </th><th>6DOF</th><th>6DOF</th><th>6DOF</th><th>3DOF</th><th>3DOF</th><th>6DOF</th><th>Head Mounted</th></tr>
-  <tr><th>buttons[0]</th><td>Thumbstick</td><td>Thumbstick</td><td>Touchpad</td><td><strong>?</strong></td><td>Inner Ring <strong>^</strong></td><td>Trackpad <strong>^</strong></td><td> </td></tr>
-  <tr><th>buttons[1]</th><td>Select <strong>^</strong></td><td>Trigger <strong>^</strong></td><td>Trigger <strong>^</strong></td><td><strong>?</strong></td><td>Back</td><td>Menu <strong>#</strong></td><td> </td></tr>
-  <tr><th>buttons[2]</th><td>Grasp</td><td>Grip</td><td>Grips</td><td> </td><td>Outer Ring - Up</td><td>System <strong>#</strong></td><td> </td></tr>
-  <tr><th>buttons[3]</th><td>Menu</td><td>A/X</td><td>Menu</td><td> </td><td>Outer Ring - Down</td><td> </td><td> </td></tr>
-  <tr><th>buttons[4]</th><td>Touchpad</td><td>B/Y</td><td> </td><td> </td><td>Outer Ring - Left</td><td> </td><td> </td></tr>
-  <tr><th>buttons[5]</th><td> </td><td>Surface</td><td> </td><td> </td><td>Outer Ring - Right</td><td> </td><td> </td></tr>
-  <tr><th>Buttons[6]</th><td> </td><td>Menu<strong>?</strong></td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
-  <tr><th>axes[0]</th><td>Thumbstick X</td><td>Thumbstick X</td><td>Touchpad X</td><td><strong>?</strong></td><td> </td><td>Trackpad X</td><td> </td></tr>
-  <tr><th>axes[1]</th><td>Thumbstick Y</td><td>Thumbstick Y</td><td>Touchpad Y</td><td> </td><td> </td><td>Trackpad Y</td><td> </td></tr>
-  <tr><th>axes[2]</th><td>Touchpad X</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
-  <tr><th>axes[3]</th><td>Touchpad Y</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
-  <tr><th>Touch “click”</th><td> </td><td> </td><td> </td><td><strong>?</strong></td><td> </td><td>Click (to be removed.)</td><td>Tap</td></tr>
-  <tr><th>Touch “scroll”</th><td> </td><td> </td><td> </td><td><strong>?</strong></td><td> </td><td> </td><td>Drag</td></tr>
-</table>
 
-* __^__ _Primary Button_
-* __#__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
-* __?__ _Needs verification from the implementers group._
+ Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | GearVR headset |
+ 6DOF | 6DOF | 6DOF | 3DOF | 3DOF | 6DOF | Head Mounted |
+| buttons[0] | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Trackpad * |
+| buttons[1] | Select * | Trigger * | Trigger * | Back | Menu ** |
+| buttons[2] | Grasp | Grip | Grips | Outer Ring - Up | System ** |
+| buttons[3] | Menu | A/X | Menu | Outer Ring - Down |
+| buttons[4] | Touchpad | B/Y | Outer Ring - Left |
+| buttons[5] | Surface | Outer Ring - Right |
+| Buttons[6] | Menu ? |
+| axes[0] | Thumbstick X | Thumbstick X | Touchpad X | Trackpad X |
+| axes[1] | Thumbstick Y | Thumbstick Y | Touchpad Y | Trackpad Y |
+| axes[2] | Touchpad X |
+| axes[3] | Touchpad Y |
+| Touch “click” | Click (to be removed.) | Tap |
+| Touch “scroll” |  Drag |
 
-So in practice, the easiest way for your experience to support all gamepads is to use a simple gaze-and-commit interaction style, listening for button presses in either index 0 OR 1 for the commit. Remember to be careful with array size - the controller may not actually have more than 1 button!
+* __*__ _Primary Button_
+* __**__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
+
+In practice, the easiest way for your experience to support all gamepads is to use a simple gaze-and-commit interaction style, listening for button presses in either index `0` or `1` for the commit. Remember to be careful with array size - the controller may not actually have more than 1 button!
 
 ### Rendering controller models
-The only time it is really useful to use the `gamepad.id` property is to render a model of a your controller. You could, for example, use the string returned by that field to look up a glTF file. If you take this approach, remember to include a generic default or fallback model in the event that a controller with an unforeseen id appears.
+The only time the [`gamepad.id`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id) property is useful is for rendering a model of a your controller. You could, for example, use the string returned by that field to look up a .glTF file. If you take this approach, remember to include a generic default or fallback model in the event that a controller with an unforeseen id appears.
 
 ## Putting it all together
 
@@ -150,16 +145,17 @@ The following CodePen shows one way to listen for a primary action across multip
 
 
 The canvas will pulse a different colour depending on what input source the action came from:
-Grey: Deactivated: No action detected
-Red: Pointer (Mouse Click or Touchpad on the canvas element)
-Blue: Keyboard Space Bar
-Green: Gamepad
+ - Grey: Deactivated: No action detected
+ - Red: Pointer (Mouse Click or Touchpad on the canvas element)
+ - Blue: Keyboard Space Bar
+ - Green: Gamepad
 
 <iframe height='300' scrolling='no' title='Multi input detection' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/oGvPpM/?height=300&theme-id=31247&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/oGvPpM/'>Multi input detection</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-If we take a close look at the JavaScript behind the example,
+If we take a closer look at the JavaScript behind the example, we see the APIs used to handle our inputs.
+
 ```javascript
 function init() {
   
