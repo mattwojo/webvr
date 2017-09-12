@@ -13,16 +13,6 @@ keywords: developer guide
 # WebVR Developer's Guide
 WebVR is an open standard JavaScript API that makes it possible to experience immersive 3D Virtual Reality (VR) applications using a web browser like Microsoft Edge and a supported VR headset.
 
-![WebVR headset hero image](img/webvr_hero.png)
-
-## Goals of the WebVR API*
-- Detect available Virtual Reality devices.
-- Query the devices capabilities.
-- Poll the device’s position and orientation.
-- Display imagery on the device at the appropriate frame rate.
-
-**According to the [W3C working group](https://github.com/w3c/webvr/blob/master/explainer.md).*
-
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="./essentials.md">
@@ -31,7 +21,7 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_policy.svg" alt="Essentials Icon" />
+                            <img src="/media/common/i_tasks.svg" alt="Essentials Icon" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -154,7 +144,7 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/img/linkedinlogo.png" alt="LinkedIn Icon" />
+                            <img src="img/linkedinlogo.png" alt="LinkedIn Icon" />
                         </div>
                     </div>
                     <div class="cardText">
