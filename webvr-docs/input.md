@@ -71,12 +71,12 @@ function tryRequestPresent() {
 ```
 
 ## Gamepad
-Traditional, 0DOF, 3DOF, and 6DOF controllers are all exposed via the [`navigator.getGamepads`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads) array. Since the [gamepad spec](https://w3c.github.io/gamepad/#dom-navigator-getgamepads) doesn't state anything about a minimum or maximum length for this array, nor the order in which elements appear, it is safest to assume all browsers implement it differently (and guess what, they do!).
+Traditional, 0DOF, 3DOF, and 6DOF controllers are all exposed via the [`navigator.getGamepads`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads) array. Since the [gamepad spec](https://w3c.github.io/gamepad/#dom-navigator-getgamepads) doesn't state anything about a minimum or maximum length for this array, nor the order in which elements appear, it's safest to assume all browsers implement it differently (and guess what, they do!).
 
 
 It's especially important when dealing with gamepads to make no assumptions on the type, ordering, or number of devices that will be returned in the array. For example, Windows Mixed Reality users may be using [motion controllers](https://developer.microsoft.com/en-us/windows/mixed-reality/motion_controllers) or a gamepad to navigate the browser in VR; they will expect those controllers to continue working once they enter a WebVR immersive session. 
 
-Your experience can determine the capability of all of the plugged in devices using the [`pose`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/pose) property of the gamepad. It is bad practice to look at the [`gamepad.id`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id) property for this purpose.
+Your experience can determine the capability of all of the plugged in devices using the [`pose`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/pose) property of the gamepad. It's bad practice to look at the [`gamepad.id`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id) property for this purpose.
 
 ```javascript
 if (gamepad.mapping === 'standard')
@@ -99,11 +99,11 @@ if (gamepad.mapping === 'standard') console.log(gamepad.id + ' is a traditional 
 
 Things get interesting with so many types of VR controllers available since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the spec for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
 
->  It is recommended that buttons appear in decreasing importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
+>  It's recommended that buttons appear in decreasing order of importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
 
-It's convention that the trigger on many 6DOF controllers is the primary, "most important" button. However, controllers in WebVR 1.1 always place the trigger at index `1` if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
+It's convention that the trigger on many 6DOF controllers is the primary, "most important" button. However, controllers in WebVR 1.1 always place the trigger at index `1` if it's present. Controllers that lack a trigger correctly place the "most important" button at index 0.
 
-With the WebVR 1.1 API we can't reliably determine whether or not a controller has a trigger. For [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]), it is recommended to listen for a primary "select" action on both button index `0` and `1`. 
+With the WebVR 1.1 API we can't reliably determine whether or not a controller has a trigger. For [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]), it's recommended to listen for a primary "select" action on both button index `0` and `1`. 
 
 >[!NOTE]
 > Be careful with the button array size. The controller may not have a button defined at index `1`.
