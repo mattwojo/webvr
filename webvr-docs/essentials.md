@@ -11,18 +11,18 @@ keywords: WebVR essentials, Inclusive Features, Capability Detection, page load,
 
 
 # WebVR Functionality Checklist
-This article outlines some essential best practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general best practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
+This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
 The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The __Foundations__ and __Hybrid__ sections are essential for all WebVR content; __Mouse Input__ and __Controller Input__ sections apply if your experience utilizes those input sources.
 
 ## Foundations
 - Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
 - Assume that `navigator.getVRDisplays` is always present in the browser; you must make a call to that function to determine if a VRDisplay is actually connected. The getVRDisplays promise will reject on systems that do not natively support MR.
--	Users may plug in their headset after the page has loaded, or disconnect & reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
+-	Users may plug in their headset after the page has loaded, or disconnect and reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
 
 ## Hybrid
-The 1.1 specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. In order for these machines to correctly support WebVR, they must either:
-- [c]orrectly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
+The 1.1 specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
+- [correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
 - if the page does not handle webglcontextrestored correctly, ensure that handlers to webglcontextlost do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
 ## Mouse Input
