@@ -52,25 +52,6 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
         </a>
     </li>
 
-     <li>
-        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/academy">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_advanced.svg" alt="Academy Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Mixed Reality Academy: code, tutorials and lessons</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_hardware_details">
         <div class="cardSize">
