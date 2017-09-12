@@ -10,18 +10,18 @@ keywords: WebVR Input
 ---
 
 # Input
-Input is one of the toughest things to get right in VR, but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an compelling interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers and multiple user steps.
+Input is one of the toughest things to get right in VR, but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers.
 
-Right now in WebVR 1.1, a site should reasonably expect visitors to limited to using only one of the following input methods (their device or situation may prohibit use of any others)
+In WebVR 1.1, a site will most likely expect visitors to be limited to using only one of the following input methods due to their device.
 
 - Mouse
-- Keyboard
 - Gamepad
   - Traditional (Xbox Controller)
   - 3DOF (Pointing & buttons)
   - 6DOF (Pointing, Position and buttons)
 
-I describe the best way to handle each in individual sections below, followed by a comprehensive example showing all input working together to provide a robust multi-platform input handler.
+Let's dig in to how to handle each input device and see how all these devices can be gathered from at once, providing a robust, multi-platform input handler.
+
 
 ## Mouse
 Since a person wearing an HMD can’t actually see what they are doing with an unrestricted mouse, it would be very easy for them to accidently click on things they don’t intend to – the browser close button, other windows or the operating system interface. In a worst case this could potentially lead to things such as an accidental format of a hard drive! For this reason, Microsoft Edge disables unrestricted mouse input when an immersive VR session is started and the headset presence sensor is covered (you’ll see the Win+Alt+I banner visible on your monitor when this is the case). This is the behavior for all apps in Windows Mixed Reality and is not unique to WebVR.
@@ -30,7 +30,18 @@ The safest way to handle mouse input when in an immersive WebVR session is to us
 
 To remain compatible with browsers that do not fire those events, it is still a good idea to also request pointerlock just prior to calling requestPresent for the user safety reasons mentioned above. 
 
-The below snippet shows an example of safely using pointerlock to handle mouse down events.  [View a full working sample at codepen.io](https://codepen.io/ransico/pen/dRXxVY?editors=0010)
+
+The only way to get mouse input while presenting to a VRDisplay is to request pointerlock. This should be done at two places: 
+- Just before making a call to VRDisplay.requestPresent
+- In response to a vrdisplaypointerrestricted event, which is called whenever mouse input context changes from HMD to Monitor (such as uncovering the presence sensor on a Windows Mixed Reality headset)
+
+
+
+The below snippet shows an example of safely using pointerlock to handle mouse down events. 
+
+<iframe height='279' scrolling='no' title='Pointerlock webvr' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/xXKagP/?height=279&theme-id=31247&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xXKagP/'>Pointerlock webvr</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 
 ```javascript
 // Globals that you would need to initialize properly in a real app - out of scope of this example.
@@ -64,9 +75,6 @@ function tryRequestPresent() {
       );
 }
 ```
-
-## Keyboard
-TODO: This section.
 
 ## Gamepad
 Traditional, 0DOF, 3DOF & 6DOF controllers are all exposed via the navigator.getGamepads() array. Since the specification does not state anything about a minimum or maximum length for the array, nor the order in which elements appear, it is safest to assume all browser vendors implement it differently (and guess what, they do!).
@@ -137,10 +145,21 @@ So in practice, the easiest way for your experience to support all gamepads is t
 The only time it is really useful to use the `gamepad.id` property is to render a model of a your controller. You could, for example, use the string returned by that field to look up a glTF file. If you take this approach, remember to include a generic default or fallback model in the event that a controller with an unforeseen id appears.
 
 ## Putting it all together
-If you are using three.js, see the [ray-input](https://www.npmjs.com/package/ray-input) module for a good gaze-and-commit implementation that listens across multiple input sources and supports progressive enhancement as more capable input sources are detected.
 
-The following snippet shows one way to listen for a primary action across multiple input sources. This could be incorporated into a wider gaze-and-commit system. Full working source code is available: [WebVR Aggregated Primary Input](https://codepen.io/ransico/pen/PjmRGJ)
+The following CodePen shows one way to listen for a primary action across multiple input sources. This could be incorporated into a wider gaze-and-commit system. 
 
+
+The canvas will pulse a different colour depending on what input source the action came from:
+Grey: Deactivated: No action detected
+Red: Pointer (Mouse Click or Touchpad on the canvas element)
+Blue: Keyboard Space Bar
+Green: Gamepad
+
+<iframe height='300' scrolling='no' title='Multi input detection' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/oGvPpM/?height=300&theme-id=31247&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/oGvPpM/'>Multi input detection</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+If we take a close look at the JavaScript behind the example,
 ```javascript
 function init() {
   
@@ -152,7 +171,7 @@ function init() {
     });  
   
   // Register for mouse restriction events, so we can request pointerlock.
-  // See https://codepen.io/ransico/pen/dRXxVY for more details on this pointerlock implementation
+  // See https://codepen.io/MicrosoftEdgeDocumentation/pen/oGvPpM for more details on this pointerlock implementation
   window.addEventListener('vrdisplaypointerrestricted', () => webglCanvas.requestPointerLock(), false);
   window.addEventListener('vrdisplaypointerunrestricted', () => document.exitPointerLock(), false);  
   window.addEventListener('vrdisplaypresentchange', () => { if (!vrDisplay.isPresenting) document.exitPointerLock() }, false);
