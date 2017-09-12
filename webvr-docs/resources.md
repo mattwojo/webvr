@@ -14,7 +14,7 @@ keywords: WebVR Resources Links
 
 ## Videos
 
-Learn more about WebVR by watching these presentations from Build 2017.
+Learn more about WebVR by watching these presentations from Build 2017, and other related content.
 
 > [!VIDEO https://channel9.msdn.com/Events/Build/2017/P4097/player]
 
@@ -25,11 +25,13 @@ Learn more about WebVR by watching these presentations from Build 2017.
 
 <i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
 
-> [!VIDEO https://www.youtube.com/watch?v=1nlcdDNOdm8]
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allowfullscreen></iframe>
 
 <i>Using motion controllers.</i>
 
-> [!VIDEO https://youtu.be/_xpI0JosYUk]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_xpI0JosYUk" frameborder="0" allowfullscreen></iframe>
 
 <i>Introducing Mixed Reality.</i>
 
@@ -40,7 +42,6 @@ If you are already using WebGL to render interactive 3D graphics in a browser, t
 ## Links
 
 * [From zero to hero, creating WebVR experiences with Babylon.js](https://www.davrous.com/2017/07/07/from-zero-to-hero-creating-webvr-experiences-with-babylon-js-on-all-platforms/)
-* [Using WebVR in Edge](https://developer.microsoft.com/en-us/windows/mixed-reality/using_webvr_in_edge_with_windows_mixed_reality)
 * [WebVR info](https://webvr.info/developers) - information for developers
 * [WebVR Rocks ](https://webvr.rocks) - list of supported browsers
 * [Firefox Nightly](https://webvr.rocks/firefox)
