@@ -46,3 +46,4 @@ Or try viewing this 360-degree photograph from the middle of Greenlake in Seattl
 
 We used [A-Frame](https://aframe.io), a web framework for building VR experiences, to set up these simple VR tests and embedded them using [CodePen](https://codepen.io/).
 
+For more information, see [Using WebVR in Edge](https://developer.microsoft.com/en-us/windows/mixed-reality/using_webvr_in_edge_with_windows_mixed_reality)
