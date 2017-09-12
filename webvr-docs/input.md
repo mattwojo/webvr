@@ -91,50 +91,46 @@ else
 
 ### Controller buttons
 
-* There is a lot of variation between hardware
-* Supporting both [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]) gives users choice of input device
-* Commit if gamepad buttons 0 or 1 are pressed (check that the buttons exist)
-* Relying on controllers with lots of buttons reduces your target audience, unless you provide an alternative input method
-
-Traditional gamepad button mappings are [documented](https://www.w3.org/TR/gamepad/#remapping) in the W3C specification. You can make sure a gamepad is using this configuration by reading the [Gamepad.mapping](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/mapping) property:
+Traditional gamepad button mappings are [documented](https://www.w3.org/TR/gamepad/#remapping) in the W3C specification. You can make sure a gamepad is using this configuration by reading the [`Gamepad.mapping`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/mapping) property:
 
 ```javascript
 if (gamepad.mapping === 'standard') console.log(gamepad.id + ' is a traditional gamepad');
 ```
 
-Things get interesting with all of the VR Controllers since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the spec for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
+Things get interesting with so many types of VR controllers available since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the spec for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
 
 >  It is recommended that buttons appear in decreasing importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
 
-It is convention that the trigger on many 6DOF controllers is the primary, "most important" button. However, controllers in WebVR 1.1 always place the trigger at index `1` if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
+It's convention that the trigger on many 6DOF controllers is the primary, "most important" button. However, controllers in WebVR 1.1 always place the trigger at index `1` if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
 
-There's no way in the current WebVR 1.1 API to reliably determine whether or not a controller has a trigger. For gaze-and-commit or point-and-commit, it is recommended to listen for a primary "select" action on both button index `0` and `1`. 
+With the WebVR 1.1 API we can't reliably determine whether or not a controller has a trigger. For [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]), it is recommended to listen for a primary "select" action on both button index `0` and `1`. 
 
 >[!NOTE]
 > Be careful with the button array size. The controller may not have a button defined at index `1`.
 
 Known controllers and their mappings:
 
- Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | GearVR headset |
- 6DOF | 6DOF | 6DOF | 3DOF | 3DOF | 6DOF | Head Mounted |
-| buttons[0] | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Trackpad * |
-| buttons[1] | Select * | Trigger * | Trigger * | Back | Menu ** |
-| buttons[2] | Grasp | Grip | Grips | Outer Ring - Up | System ** |
-| buttons[3] | Menu | A/X | Menu | Outer Ring - Down |
-| buttons[4] | Touchpad | B/Y | Outer Ring - Left |
-| buttons[5] | Surface | Outer Ring - Right |
-| Buttons[6] | Menu ? |
-| axes[0] | Thumbstick X | Thumbstick X | Touchpad X | Trackpad X |
-| axes[1] | Thumbstick Y | Thumbstick Y | Touchpad Y | Trackpad Y |
-| axes[2] | Touchpad X |
-| axes[3] | Touchpad Y |
-| Touch “click” | Click (to be removed.) | Tap |
-| Touch “scroll” |  Drag |
+</br> | Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | GearVR headset |
+--- | --- | --- | --- | --- | --- | --- |
+| **Control type** | **6DOF** | **6DOF** | **6DOF** | **3DOF** | **6DOF** | **Head Mounted** |
+| **buttons[0]** | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Trackpad * |
+| **buttons[1]** | Select * | Trigger * | Trigger * | Back | Menu ** |
+| **buttons[2]** | Grasp | Grip | Grips | Outer Ring - Up | System ** |
+| **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down |
+| **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left |
+| **buttons[5]** | | Surface | | Outer Ring - Right |
+| **buttons[6]** | | Menu ? |
+| **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X | | Trackpad X |
+| **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y | | Trackpad Y |
+| **axes[2]** | Touchpad X |
+| **axes[3]** | Touchpad Y |
+| **Touch "click"** | | | | | Click (to be removed) | Tap |
+| **Touch "scroll"** | | | | | | Drag |
 
 * __*__ _Primary Button_
 * __**__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
 
-In practice, the easiest way for your experience to support all gamepads is to use a simple gaze-and-commit interaction style, listening for button presses in either index `0` or `1` for the commit. Remember to be careful with array size - the controller may not actually have more than 1 button!
+The easiest way for your experience to support all gamepads is to use a simple gaze-and-commit interaction style, listening for button presses in either index `0` or `1` for the commit. Remember to be careful with array size - the controller may not actually have more than 1 button! Also adding support for point-and-commit will gives users even more of a choice. Supporting both point-and-commit and gaze-and-commit gives users choice of input device.
 
 ### Rendering controller models
 The only time the [`gamepad.id`](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id) property is useful is for rendering a model of a your controller. You could, for example, use the string returned by that field to look up a .glTF file. If you take this approach, remember to include a generic default or fallback model in the event that a controller with an unforeseen id appears.
