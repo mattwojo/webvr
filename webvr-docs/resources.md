@@ -14,7 +14,7 @@ keywords: WebVR Resources Links
 
 ## Videos
 
-Learn more about WebVR by watching these presentations from Build 2017.
+Learn more about WebVR by watching these presentations from Build 2017, and other related content.
 
 > [!VIDEO https://channel9.msdn.com/Events/Build/2017/P4097/player]
 
@@ -24,6 +24,8 @@ Learn more about WebVR by watching these presentations from Build 2017.
 > [!VIDEO https://channel9.msdn.com/Events/Build/2017/T6987/player]
 
 <i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
+
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allowfullscreen></iframe>
 
