@@ -1,6 +1,6 @@
 ---
-title: WebVR Essentials
-description: WebVR essentials include inclusive features and capability detection, automatically entering VR on page load, and plugging in HMD.
+title: WebVR functionality checklist
+description: WebVR functionality checklist including features and capability detection, automatically entering VR on page load, and plugging in HMD.
 author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
@@ -9,20 +9,19 @@ ms.prod: webvr
 keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
 ---
 
-
 # WebVR functionality checklist
-This article outlines some essential best practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general best practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
+This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
 The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The __Foundations__ and __Hybrid__ sections are essential for all WebVR content; __Mouse Input__ and __Controller Input__ sections apply if your experience utilizes those input sources.
 
 ## Foundations
 - Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
 - Assume that `navigator.getVRDisplays` is always present in the browser; you must make a call to that function to determine if a VRDisplay is actually connected. The getVRDisplays promise will reject on systems that do not natively support MR.
--	Users may plug in their headset after the page has loaded, or disconnect & reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
+-	Users may plug in their headset after the page has loaded, or disconnect and reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
 
 ## Hybrid
-The 1.1 specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. In order for these machines to correctly support WebVR, they must either:
-- [c]orrectly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
+The [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/) specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
+- [correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
 - if the page does not handle webglcontextrestored correctly, ensure that handlers to webglcontextlost do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
 ## Mouse Input
@@ -42,18 +41,19 @@ Care should be taken to:
 - Handle a "primary action" on a press of button index 1 as well as 0
 
 Full mappings of Windows Motion Controllers exposed via the gamepad API:
-<table>
-  <tr><th>Button/Axis Index</th><th>Mapping</th></tr>
-  <tr><td>buttons[0]</td><td>Thumbstick</td></tr>
-  <tr><td>buttons[1]</td><td>Select/Trigger</td></tr>
-  <tr><td>buttons[2]</td><td>Grasp</td></tr>
-  <tr><td>buttons[3]</td><td>Menu</td></tr>
-  <tr><td>buttons[4]</td><td>Touchpad</td></tr>
-  <tr><td>axes[0]</td><td>Thumbstick X</td></tr>
-  <tr><td>axes[1]</td><td>Thumbstick Y</td></tr>
-  <tr><td>axes[2]</td><td>Touchpad X</td></tr>
-  <tr><td>axes[3]</td><td>Touchpad Y</td></tr>
-</table>
+
+| Button/Axis Index | Mapping |
+| ------ | ------ |
+| buttons[0] | Thumbstick |
+| buttons[1] | Select/Trigger |
+| buttons[2] | Grasp | 
+| buttons[3] | Menu | 
+| buttons[4] | Touchpad | 
+| axes[0] | Thumbstick X | 
+| axes[1] | Thumbstick Y | 
+| axes[2] | Touchpad X | 
+| axes[3] | Touchpad Y | 
+
 
 # Inclusive Feature and Capability Detection
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the `VRDisplay.displayName`, as this will prevent your site working on future hardware.

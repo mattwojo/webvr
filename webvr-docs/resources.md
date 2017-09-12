@@ -1,3 +1,4 @@
+
 ---
 title: Resources
 description: Resources and Links. 
@@ -11,6 +12,34 @@ keywords: WebVR Resources Links
 
 # Resources
 
+## Videos
+
+Learn more about WebVR by watching these presentations from Build 2017.
+
+> [!VIDEO https://channel9.msdn.com/Events/Build/2017/P4097/player]
+
+<i>WebVR: Adding VR to your web sites and web apps.</i>
+
+
+> [!VIDEO https://channel9.msdn.com/Events/Build/2017/T6987/player]
+
+<i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
+
+> [!VIDEO https://www.youtube.com/watch?v=1nlcdDNOdm8]
+
+<i>Using motion controllers.</i>
+
+> [!VIDEO https://youtu.be/_xpI0JosYUk]
+
+<i>Introducing Mixed Reality.</i>
+
+## WebVR and WebGL
+If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive demos utilizing WebVR and WebGL coming soon.
+
+
+## Links
+
+* [From zero to hero, creating WebVR experiences with Babylon.js](https://www.davrous.com/2017/07/07/from-zero-to-hero-creating-webvr-experiences-with-babylon-js-on-all-platforms/)
 * [Using WebVR in Edge](https://developer.microsoft.com/en-us/windows/mixed-reality/using_webvr_in_edge_with_windows_mixed_reality)
 * [WebVR info](https://webvr.info/developers) - information for developers
 * [WebVR Rocks ](https://webvr.rocks) - list of supported browsers
@@ -18,7 +47,6 @@ keywords: WebVR Resources Links
 * [Oculus Caramel](https://www.oculus.com/experiences/gear-vr/1290985657630933/)
 * [WebVR samples](https://webvr.info/samples/)
 * [WebVR Developers on LinkedIn](https://www.linkedin.com/groups/13500607/profile)
-
 
 ## Related videos
 MR motion controllers video: https://www.youtube.com/watch?v=1nlcdDNOdm8

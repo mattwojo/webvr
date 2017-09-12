@@ -11,7 +11,9 @@ keywords: WebVR hardware
 
 # WebVR Hardware
 
-To view WebVR on Edge on Windows, you can use a Windows Mixed Reality Headset. There are several developer editions now available to choose from.
+To view WebVR content on Microsft Edge, you can use a Windows Mixed Reality headset. These headsets connect to the HDMI and USB 3 ports of compatible desktop or laptop computer, and include screens and position sensors.
+
+Several Windows Mixed Reality developer editions are available to purchase. Hand controllers will also be available soon. See [Windows Mixed Reality holiday update](https://blogs.windows.com/windowsexperience/2017/08/28/windows-mixed-reality-holiday-update/) for more information.
 
 ![Devices](img/windows-mr-headset.jpg)
 
@@ -25,8 +27,10 @@ The [Microsoft HoloLens](https://developer.microsoft.com/en-us/windows/mixed-rea
 
 ## Other resources
 
-[MicrosoftStore](https://www.microsoft.com/en-us/store/b/virtualreality?icid=CNavVirtualReality) link to VR hardware.
+[MicrosoftStore](https://www.microsoft.com/en-us/store/b/virtualreality?icid=CNavVirtualReality) link to VR hardware, including headsets.
 
 
-No device? Use the [Windows Mixed Reality Simulator](https://developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator)
+## Alternatives to headsets
+
+If you don't currently have access to a headset, you can use the [Windows Mixed Reality Simulator](https://developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator) to open an instance of the Microsoft Edge browser, and go to a site containing WebVR content.
 

@@ -13,6 +13,16 @@ keywords: developer guide
 # WebVR Developer's Guide
 WebVR is an open standard JavaScript API that makes it possible to experience immersive 3D Virtual Reality (VR) applications using a web browser like Microsoft Edge and a supported VR headset.
 
+![WebVR headset hero image](img/webvr_hero/png)
+
+## Goals of the WebVR API*
+- Detect available Virtual Reality devices.
+- Query the devices capabilities.
+- Poll the device’s position and orientation.
+- Display imagery on the device at the appropriate frame rate.
+
+**According to the [W3C working group](https://github.com/w3c/webvr/blob/master/explainer.md).*
+
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="./essentials.md">
@@ -25,7 +35,7 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>WebVR Essentials</h3>
+                        <h3>WebVR functionality checklist</h3>
                     </div>
                 </div>
             </div>
@@ -33,32 +43,26 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
         </a>
     </li>
 
-  </ul>
-  
----
-
-<h2>Reference</h2>
-
-<ul class="panelContent cardsFTitle">
-        <li>
+    <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_portal.svg" alt="Mixed Reality Icon" />
+                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="Immersive headset icon" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>More about Windows Mixed Reality</h3>
+                        <h3>Windows Mixed Reality</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
-    <li>
+
+     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality/academy">
         <div class="cardSize">
             <div class="cardPadding">
@@ -69,13 +73,61 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Mixed Reality Academy</h3>
+                        <h3>Mixed Reality Academy: code, tutorials and lessons</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
+
+    <li>
+        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_hardware_details">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tools.svg" alt="Immersive headset icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Immersive headset hardware details</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+
+
+
+  </ul>
+  
+---
+
+<h2>Reference</h2>
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="//github.com/w3c/webvr/blob/master/explainer.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_benefits.svg" alt="W3C working group icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>W3C WebVR working group</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality/community">
         <div class="cardSize">
@@ -94,40 +146,24 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
         </div>
         </a>
     </li>
+
     <li>
-        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/Using_WebVR_in_Edge_with_Windows_Mixed_Reality">
+        <a href="//www.linkedin.com/groups/13500607/profile">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="Immersive headset icon" />
+                            <img src="/img/linkedinlogo.png" alt="LinkedIn Icon" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Using WebVR in Microsoft Edge</h3>
+                        <h3>WebVR Developers on LinkedIn</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
-    <li>
-        <a href="//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_hardware_details">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="Immersive headset icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Immersive headset hardware details</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
+    
 </ul>
