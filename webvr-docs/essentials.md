@@ -12,7 +12,7 @@ keywords: WebVR essentials, Inclusive Features, Capability Detection, page load,
 # WebVR functionality checklist
 This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
-The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#foundations) and [Hybrid](#hybrid) sections are essential for all WebVR content; [Mouse input](#mouse-input) and [Controller input](#controller-input) sections apply if your experience utilizes those input sources.
+The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#foundations) and [Multi-GPU systems](#multi-gpu-systems) sections are essential for all WebVR content; [Mouse input](#mouse-input) and [Controller input](#controller-input) sections apply if your experience utilizes those input sources.
 
 ## Foundations
 - Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
