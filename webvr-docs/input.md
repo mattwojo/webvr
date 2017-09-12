@@ -10,7 +10,7 @@ keywords: WebVR Input
 ---
 
 # Input
-Input is one of the toughest things to get right in virtual reality (VR), but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers.
+Input is one of the most difficult things to get right in virtual reality (VR), but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers.
 
 In [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/), a site will most likely expect visitors to be limited to using only one of the following input methods due to their device.
 
@@ -119,7 +119,7 @@ Known controllers and their mappings:
 | **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down |
 | **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left |
 | **buttons[5]** | | Surface | | Outer Ring - Right |
-| **buttons[6]** | | Menu ? |
+| **buttons[6]** | | Menu |
 | **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X | | Trackpad X |
 | **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y | | Trackpad Y |
 | **axes[2]** | Touchpad X |
