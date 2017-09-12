@@ -18,3 +18,11 @@ keywords: WebVR Resources Links
 * [Oculus Caramel](https://www.oculus.com/experiences/gear-vr/1290985657630933/)
 * [WebVR samples](https://webvr.info/samples/)
 * [WebVR Developers on LinkedIn](https://www.linkedin.com/groups/13500607/profile)
+
+
+## Related videos
+MR motion controllers video: https://www.youtube.com/watch?v=1nlcdDNOdm8
+Mixed Reality blends physical and virtual spaces (what is mixed reality?): https://youtu.be/_xpI0JosYUk 
+
+## WebVR and WebGL
+If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive samples demonstrating how to apply the WebVR API to your WebGL code coming soon.
