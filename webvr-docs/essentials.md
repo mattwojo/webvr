@@ -13,25 +13,25 @@ keywords: WebVR essentials, Inclusive Features, Capability Detection, page load,
 # WebVR Functionality Checklist
 This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
-The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The __Foundations__ and __Hybrid__ sections are essential for all WebVR content; __Mouse Input__ and __Controller Input__ sections apply if your experience utilizes those input sources.
+The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#Foundations) and [Hybrid](#Hybrid) sections are essential for all WebVR content; [Mouse input](#Mouse-input) and [Controller input](#Controller-input) sections apply if your experience utilizes those input sources.
 
 ## Foundations
 - Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
 - Assume that `navigator.getVRDisplays` is always present in the browser; you must make a call to that function to determine if a VRDisplay is actually connected. The getVRDisplays promise will reject on systems that do not natively support MR.
--	Users may plug in their headset after the page has loaded, or disconnect and reconnect without reloading the page. Handle this through the `vrdisplayconnect` and `vrdisplaydisconnect` event.
+-	Users may plug in their headset after the page has loaded, or disconnect and reconnect without reloading the page. Handle this through the [`vrdisplayconnect`](https://developer.mozilla.org/en-US/docs/Web/Events/vrdisplayconnect) and [`vrdisplaydisconnect`](https://developer.mozilla.org/en-US/docs/Web/Events/vrdisplaydisconnect) event.
 
 ## Hybrid
 The [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/) specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
 - [correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
-- if the page does not handle webglcontextrestored correctly, ensure that handlers to webglcontextlost do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
+- if the page does not handle [`webglcontextrestored`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextrestored) correctly, ensure that handlers to [`webglcontextlost`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextlost) do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
-## Mouse Input
+## Mouse input
 Some platforms (including Windows Mixed Reality) disable the mouse cursor on the 2D desktop when the user is wearing a headset. Mouse input (position deltas and button presses) can be accessed whilst in an exclusive mode WebVR application through the use of pointer lock, which should be requested on a page element (usually the canvas, for convenience). Note that whilst the page is presenting to an HMD and mouse input is restricted, the requirement for user consent to get pointerlock is waived. 
 
-- To enable mouse clicks whilst in VR, pages should request pointerlock in response to the [vrdisplaypointerrestricted](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event) event.
+- To enable mouse clicks whilst in VR, pages should request pointerlock in response to the [`vrdisplaypointerrestricted`](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event) event.
 
-## Controller Input
-Windows Motion Controllers are only present in the array returned by a call to navigator.getGamepads() while the page is presenting to the headset, and will always be in array positions 4 or greater. The array itself will have a dynamic length, ranging from 4 to 6 (or more) elements. Once presentation stops, the controllers are removed from the array. Gaps in the array will be filled with null.
+## Controller input
+Windows Motion Controllers are only present in the array returned by a call to [`navigator.getGamepads`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads) while the page is presenting to the headset, and will always be in array positions 4 or greater. The array itself will have a dynamic length, ranging from 4 to 6 (or more) elements. Once presentation stops, the controllers are removed from the array. Gaps in the array will be filled with null.
 
 Care should be taken to:
 - Iterate over the entire length of the gamepads array, and make no assumptions on controllers being at given array indices. 
@@ -60,13 +60,13 @@ When determining whether or not to enable your WebVR feature (as opposed to a fa
 
 Just because the WebVR API is present in the browser doesn’t mean an HMD is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
 
-Once you determine that the WebVR API exists, make a call to `navigator.getVRDisplays()`. The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as `VRDisplay.hasExternalDisplay`. This promise may be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed)
+Once you determine that the WebVR API exists, make a call to [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays). The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as [`VRDisplay.hasExternalDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/hasExternalDisplay). This promise may be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed)
 
-# Sample Code
+# Sample code
 ## The Enter VR button
-The Enter VR button is a visual cue that your content can present to an external headset, so should be visible on systems that support the API, even no headset is plugged in. _Feature detection_ can be used to determine the visibility (and enabled state) of the button.
+The Enter VR button is a visual cue that your content can present to an external headset, so should be visible on systems that support the API, even no headset is plugged in. Feature detection can be used to determine the visibility (and enabled state) of the button.
 
-The button should conform to the general visual conventions that have been adopted by many sites: an simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus.
+The button should conform to the general visual conventions that have been adopted by many sites: a simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus.
 
 Typical Enter VR button image:
 ![Enter VR button from Mozillas' A-Frame](img/enter-vr.png)
@@ -79,7 +79,7 @@ The button should have one of 3 possible states:
 - __hidden__: Invisible.
 
 The logic to determine which of these three states the button is in is summarized below, with some reference javascript code: 
-- If `navigator.getVRDisplays` method DOESN'T EXIST, hide the button.
+- If [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays) method DOESN'T EXIST, hide the button.
 - If `navigator.getVRDisplays` method EXISTS, show the button
   - If promise fulfils with 0 displays, disable the button.
   - If promise fulfils with 1 (or more) VRDisplays, enable the button.
@@ -104,7 +104,7 @@ function calculateButtonState() {
 ```
 
 ## Users may plug in their HMD after loading your website. 
-If you are performing any logic whatsoever on page load that makes decisions based on the presence of a VRDisplay, such as enabling an Enter VR button, make sure you listen for the `window.onvrdisplayconnect` (and associated `window.onvrdisplaydisconnect`) events.
+If you are performing any logic whatsoever on page load that makes decisions based on the presence of a VRDisplay, such as enabling an Enter VR button, make sure you listen for the [`window.onvrdisplayconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect) (and associated [`window.onvrdisplaydisconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect)) events.
 
 The below example shows one possible usage of the `vrdisplayconnect` event, to enable the Enter VR button when a headset is connected after page load.
 
@@ -139,12 +139,13 @@ function setEnterVRButtonState(state) {
 }
 ```
 
-# Advanced Features
+# Advanced features
 
 ## Automatically entering VR when the page loads
-__Important:__ not all platforms support this. Always provide an Enter VR button as well.
+> [!IMPORTANT]
+> Not all platforms support this. Always provide an Enter VR button as well.
 
-In browsers that do not require the page to call `requestPresent` from within the context of a user initiated action, it is possible to make the call at any time. Thus, to attempt to enter VR immedately, simply place a call to `requestPresent` after initialization completes.
+In browsers that do not require the page to call [`requestPresent`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/requestPresent) from within the context of a user initiated action, it's possible to make the call at any time. To attempt to enter VR immedately, place a call to `requestPresent` after initialization completes.
 
 ```javascript
 // On page load, simply make a call to your standard enterVR method
