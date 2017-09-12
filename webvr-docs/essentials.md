@@ -22,8 +22,8 @@ The following checklist is split into four categories. Meeting all points in thi
 
 ## Hybrid
 The [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/) specification was recently amended to add support for multi-GPU systems, such as hybrid laptops with an integrated and more powerful GPU. For these machines to correctly support WebVR, they must either:
-- [correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
-- if the page does not handle [`webglcontextrestored`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextrestored) correctly, ensure that handlers to [`webglcontextlost`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextlost) do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
+- [Correctly handle](https://www.khronos.org/webgl/wiki/HandlingContextLost) the webglcontextlost and webglcontextrestored events.
+- If the page does not handle [`webglcontextrestored`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextrestored) correctly, ensure that handlers to [`webglcontextlost`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextlost) do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
 ## Mouse input
 Some platforms (including Windows Mixed Reality) disable the mouse cursor on the 2D desktop when the user is wearing a headset. Mouse input (position deltas and button presses) can be accessed whilst in an exclusive mode WebVR application through the use of pointer lock, which should be requested on a page element (usually the canvas, for convenience). Note that whilst the page is presenting to an HMD and mouse input is restricted, the requirement for user consent to get pointerlock is waived. 
@@ -56,7 +56,7 @@ Full mappings of Windows Motion Controllers exposed via the gamepad API:
 </table>
 
 # Inclusive Feature and Capability Detection
-When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the `VRDisplay.displayName`, as this will prevent your site working on future hardware.
+When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the [`VRDisplay.displayName`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/displayName), as this will prevent your site working on future hardware.
 
 Just because the WebVR API is present in the browser doesn’t mean an HMD is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
 
@@ -74,15 +74,15 @@ Typical Enter VR button image:
 It is helpful to bind a keyboard button, such as 'E', to the control.
 
 The button should have one of 3 possible states: 
-- __enabled__: Visible and white. Clicking will make a call to requestPresent.
-- __disabled__: Visible but greyed. Clicking will perform a no-op, or display a message directing the user to plug in a headset.
-- __hidden__: Invisible.
+- **enabled** -  Visible and white. Clicking will make a call to requestPresent.
+- **disabled** - Visible but greyed. Clicking will perform a no-op, or display a message directing the user to plug in a headset.
+- **hidden** - Invisible.
 
 The logic to determine which of these three states the button is in is summarized below, with some reference javascript code: 
 - If [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays) method DOESN'T EXIST, hide the button.
 - If `navigator.getVRDisplays` method EXISTS, show the button
   - If promise fulfils with 0 displays, disable the button.
-  - If promise fulfils with 1 (or more) VRDisplays, enable the button.
+  - If promise fulfils with 1 (or more) [`VRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay), enable the button.
   - If promise rejects, hide the button.
 
 ```javascript
@@ -104,7 +104,7 @@ function calculateButtonState() {
 ```
 
 ## Users may plug in their HMD after loading your website. 
-If you are performing any logic whatsoever on page load that makes decisions based on the presence of a VRDisplay, such as enabling an Enter VR button, make sure you listen for the [`window.onvrdisplayconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect) (and associated [`window.onvrdisplaydisconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect)) events.
+If you are performing any logic on page load that makes decisions based on the presence of a [`VRDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay), such as enabling an Enter VR button, make sure you listen for the [`window.onvrdisplayconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect) (and associated [`window.onvrdisplaydisconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect)) events.
 
 The below example shows one possible usage of the `vrdisplayconnect` event, to enable the Enter VR button when a headset is connected after page load.
 
