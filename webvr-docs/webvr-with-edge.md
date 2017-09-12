@@ -5,7 +5,8 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 09/11/2017
 ms.topic: article
-ms.prod: webvr
+ms.prod: microsoft-edge
+ms.technology: webvr
 keywords: WebVR, Microsoft Edge
 ---
 

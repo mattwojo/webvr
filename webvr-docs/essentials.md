@@ -5,7 +5,8 @@ author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
-ms.prod: webvr
+ms.prod: microsoft-edge
+ms.technology: webvr
 keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
 ---
 
