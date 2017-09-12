@@ -1,5 +1,7 @@
 # [WebVR Developer's Guide](index.md)
-## [WebVR Essentials](essentials.md)
+## [WebVR functionality checklist](essentials.md)
 ## [Input guide](input.md)
 ## [Try WebVR with Microsoft Edge](webvr-with-edge.md)
 ## [WebVR demos](demos.md)
+## [Hardware guide](hardware.md)
+## [Resources](resources.md)

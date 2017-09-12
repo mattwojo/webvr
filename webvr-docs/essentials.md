@@ -1,6 +1,6 @@
 ---
-title: WebVR Essentials
-description: WebVR essentials include inclusive features and capability detection, automatically entering VR on page load, and plugging in HMD.
+title: WebVR functionality checklist
+description: WebVR functionality checklist including features and capability detection, automatically entering VR on page load, and plugging in HMD.
 author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
@@ -9,8 +9,7 @@ ms.prod: webvr
 keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
 ---
 
-
-# WebVR Functionality Checklist
+# WebVR functionality checklist
 This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
 The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#foundations) and [Hybrid](#hybrid) sections are essential for all WebVR content; [Mouse input](#mouse-input) and [Controller input](#controller-input) sections apply if your experience utilizes those input sources.
@@ -42,18 +41,19 @@ Care should be taken to:
 - Handle a "primary action" on a press of button index 1 as well as 0
 
 Full mappings of Windows Motion Controllers exposed via the gamepad API:
-<table>
-  <tr><th>Button/Axis Index</th><th>Mapping</th></tr>
-  <tr><td>buttons[0]</td><td>Thumbstick</td></tr>
-  <tr><td>buttons[1]</td><td>Select/Trigger</td></tr>
-  <tr><td>buttons[2]</td><td>Grasp</td></tr>
-  <tr><td>buttons[3]</td><td>Menu</td></tr>
-  <tr><td>buttons[4]</td><td>Touchpad</td></tr>
-  <tr><td>axes[0]</td><td>Thumbstick X</td></tr>
-  <tr><td>axes[1]</td><td>Thumbstick Y</td></tr>
-  <tr><td>axes[2]</td><td>Touchpad X</td></tr>
-  <tr><td>axes[3]</td><td>Touchpad Y</td></tr>
-</table>
+
+| Button/Axis Index | Mapping |
+| ------ | ------ |
+| buttons[0] | Thumbstick |
+| buttons[1] | Select/Trigger |
+| buttons[2] | Grasp | 
+| buttons[3] | Menu | 
+| buttons[4] | Touchpad | 
+| axes[0] | Thumbstick X | 
+| axes[1] | Thumbstick Y | 
+| axes[2] | Touchpad X | 
+| axes[3] | Touchpad Y | 
+
 
 # Inclusive Feature and Capability Detection
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the [`VRDisplay.displayName`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/displayName), as this will prevent your site working on future hardware.

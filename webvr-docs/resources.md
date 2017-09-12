@@ -77,7 +77,24 @@ Learn more about WebVR by watching these presentations from Build 2017, and othe
 
 
 
+<<<<<<< HEAD
+* [From zero to hero, creating WebVR experiences with Babylon.js](https://www.davrous.com/2017/07/07/from-zero-to-hero-creating-webvr-experiences-with-babylon-js-on-all-platforms/)
+* [WebVR info](https://webvr.info/developers) - information for developers
+* [WebVR Rocks ](https://webvr.rocks) - list of supported browsers
+* [Firefox Nightly](https://webvr.rocks/firefox)
+* [Oculus Caramel](https://www.oculus.com/experiences/gear-vr/1290985657630933/)
+* [WebVR samples](https://webvr.info/samples/)
+* [WebVR Developers on LinkedIn](https://www.linkedin.com/groups/13500607/profile)
+
+## Related videos
+MR motion controllers video: https://www.youtube.com/watch?v=1nlcdDNOdm8
+Mixed Reality blends physical and virtual spaces (what is mixed reality?): https://youtu.be/_xpI0JosYUk 
+
+## WebVR and WebGL
+If you are already using WebGL to render interactive 3D graphics in a browser, the switch to WebVR will be a natural continuation of your work. We will have more documentation and interactive samples demonstrating how to apply the WebVR API to your WebGL code coming soon.
+=======
 
 
 
 
+>>>>>>> 026d9abc36447213287146117f8166919348e68a

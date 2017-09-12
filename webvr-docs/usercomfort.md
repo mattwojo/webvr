@@ -1,7 +1,7 @@
 ---
 title: User Comfort
 description: User comfort is a key component to a good WebVR Mixed Reality experience.
-author: <!-- GitHub alias -->
+author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
