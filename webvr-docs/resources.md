@@ -18,8 +18,8 @@ Here are some links to useful resources and documentation.
 
 * [WebVR info](https://webvr.info/developers) 
 * [WebVR Spec](https://w3c.github.io/webvr/)
-* [Getting started without VR hardware](http://aka.ms/webvrsimulator)
-* [Development hardware](https://www.microsoft.com/en-us/store/b/virtualreality?icid=TopNavVirtualReality)
+* [Getting started without VR hardware](https://developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator)
+* [Where to buy development hardware](https://www.microsoft.com/en-us/store/b/virtualreality?icid=TopNavVirtualReality)
 
 ## Documentation
 
