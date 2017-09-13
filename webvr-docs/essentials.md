@@ -1,13 +1,13 @@
 ---
 title: WebVR functionality checklist
-description: WebVR functionality checklist including features and capability detection, automatically entering VR on page load, and plugging in HMD.
+description: WebVR functionality checklist including features and capability detection, automatically entering VR on page load, and plugging in headset.
 author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: webvr
-keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
+keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in headset
 ---
 
 # WebVR functionality checklist
@@ -26,7 +26,7 @@ The [WebVR 1.1](https://w3c.github.io/webvr/spec/1.1/) specification was recentl
 - If the page does not handle [`webglcontextrestored`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextrestored) correctly, ensure that handlers to [`webglcontextlost`](https://developer.mozilla.org/en-US/docs/Web/Events/webglcontextlost) do NOT call arg0.preventDefault(), as that will opt-out of our fallback behavior.
 
 ## Mouse input
-Some platforms (including Windows Mixed Reality) disable the mouse cursor on the 2D desktop when the user is wearing a headset. Mouse input (position deltas and button presses) can be accessed whilst in an exclusive mode WebVR application through the use of pointer lock, which should be requested on a page element (usually the canvas, for convenience). Note that whilst the page is presenting to an HMD and mouse input is restricted, the requirement for user consent to get pointerlock is waived. 
+Some platforms (including Windows Mixed Reality) disable the mouse cursor on the 2D desktop when the user is wearing a headset. Mouse input (position deltas and button presses) can be accessed whilst in an exclusive mode WebVR application through the use of pointer lock, which should be requested on a page element (usually the canvas, for convenience). Note that whilst the page is presenting to an headset and mouse input is restricted, the requirement for user consent to get pointerlock is waived. 
 
 - To enable mouse clicks whilst in VR, pages should request pointerlock in response to the [`vrdisplaypointerrestricted`](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event) event.
 
@@ -59,9 +59,9 @@ Full mappings of Windows Motion Controllers exposed via the gamepad API:
 # Inclusive Feature and Capability Detection
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the [`VRDisplay.displayName`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/displayName), as this will prevent your site working on future hardware.
 
-Just because the WebVR API is present in the browser doesn’t mean an HMD is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
+Just because the WebVR API is present in the browser doesn’t mean an headset is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
 
-Once you determine that the WebVR API exists, make a call to [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays). The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as [`VRDisplay.hasExternalDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/hasExternalDisplay). This promise may be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed)
+Once you determine that the WebVR API exists, make a call to [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays). The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as [`VRDisplay.hasExternalDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/hasExternalDisplay). This promise will be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed, or the system hardware cannot support VR). You can handle a rejected promise by falling back to a magic window experience (using device orientation API's) if appropriate.
 
 # Sample code
 ## The Enter VR button
@@ -70,7 +70,7 @@ The Enter VR button is a visual cue that your content can present to an external
 The button should conform to the general visual conventions that have been adopted by many sites: a simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus.
 
 Typical Enter VR button image:
-![Enter VR button from Mozillas' A-Frame](img/enter-vr.png)
+![Enter VR button from BabylonJS](img/enter-vr.png)
 
 It is helpful to bind a keyboard button, such as 'E', to the control.
 
@@ -104,7 +104,7 @@ function calculateButtonState() {
 }
 ```
 
-## Users may plug in their HMD after loading your website. 
+## Users may plug in their headset after loading your website. 
 If you are performing any logic on page load that makes decisions based on the presence of a [`VRDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay), such as enabling an Enter VR button, make sure you listen for the [`window.onvrdisplayconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect) (and associated [`window.onvrdisplaydisconnect`](https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect)) events.
 
 The below example shows one possible usage of the `vrdisplayconnect` event, to enable the Enter VR button when a headset is connected after page load.
