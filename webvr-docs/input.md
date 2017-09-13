@@ -34,7 +34,7 @@ To remain compatible with browsers that don't fire those events, it's still a go
 
 The below snippet shows an example of safely using pointerlock to handle mouse down events. Here we see the pointerlock being requested just before calling `requestPresent` and in response to a `vrdisplayrestricted` event which is called whenever mouse input context changes from HMD to Monitor (such as uncovering the presence sensor on a Windows Mixed Reality headset).
 
-<iframe height='300' scrolling='no' title='Pointerlock webvr' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xXKagP/?height=300&theme-id=31247&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xXKagP/'>Pointerlock webvr</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Pointerlock webvr' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xXKagP/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xXKagP/'>Pointerlock webvr</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ```javascript
