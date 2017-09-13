@@ -18,9 +18,7 @@ Hand controllers will also be available shortly. See [Windows Mixed Reality holi
 
 ![Devices](img/windows-mr-headset.jpg)
 
-Links to the Microsoft Store for purchasing headsets:
-
-* [VR and Mixed Reality headsets](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets)
+* [Purchase VR and Mixed Reality headsets in the Microsoft Store](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets)
 
 * [HP Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/hp-windows-mixed-reality-headset-developer-edition/91thzqtvgspf/lpmq)
 
