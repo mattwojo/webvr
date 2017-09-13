@@ -24,6 +24,13 @@ Links to the Microsoft Store for purchasing headsets:
 
 * [HP Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/hp-windows-mixed-reality-headset-developer-edition/91thzqtvgspf/lpmq)
 
+* [Lenovo Explorer™ immersive headset](http://blog.lenovo.com/en/blog/lenovo-unveils-the-lenovo-explorer-immersive-headset-for-windows-mixed-real)
+
+* [Dell Mixed Reality Headset](https://blog.dell.com/en-us/dell-mixed-reality-headset-develops-further/)
+
+* [Acer Mixed Realtity Headset](https://www.acer.com/ac/en/US/content/series-features/hmd)
+
+* [Acer Mixed Reality Headset with Motion Controller](https://www.acer.com/ac/en/US/content/series/wmr)
 
 ## Alternatives to headsets
 
