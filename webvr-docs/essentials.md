@@ -5,15 +5,14 @@ author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
-ms.prod: microsoft-edge
-ms.technology: webvr
+ms.prod: webvr
 keywords: WebVR essentials, Inclusive Features, Capability Detection, page load, plugging in HMD
 ---
 
 # WebVR functionality checklist
 This article outlines some good practices to ensure that your WebVR experiance works great across a range of browsers and hardware. It starts with a checklist that outlines some common traps, and how to avoid them. Later, we present some general good practices and sample code that will help, even if you are using a WebGL library (such as [BabylonJS](https://www.babylonjs.com/), [a-frame](https://aframe.io/), [React VR](https://facebook.github.io/react-vr/), [threejs](https://threejs.org/)) to create your experience.
 
-The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#foundations) and [Multi-GPU systems](#multi-gpu-systems) sections are essential for all WebVR content; [Mouse input](#mouse-input) and [Controller input](#controller-input) sections apply if your experience utilizes those input sources.
+The following checklist is split into four categories. Meeting all points in this list will ensure you have a robust WebVR experience in Microsoft Edge and other browsers. The [Foundations](#foundations) and [Hybrid](#hybrid) sections are essential for all WebVR content; [Mouse input](#mouse-input) and [Controller input](#controller-input) sections apply if your experience utilizes those input sources.
 
 ## Foundations
 - Applications should gracefully handle a null value for VRDisplay.stageParameters (Microsoft Edge does not support stage parameters at this time.)
@@ -59,9 +58,9 @@ Full mappings of Windows Motion Controllers exposed via the gamepad API:
 # Inclusive Feature and Capability Detection
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet. In general, avoid making functional decisions based on meta data, such as the [`VRDisplay.displayName`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplay/displayName), as this will prevent your site working on future hardware.
 
-Just because the WebVR API is present in the browser doesn’t mean an HMD is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
+Just because the WebVR API is present in the browser doesn’t mean a headset is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
 
-Once you determine that the WebVR API exists, make a call to [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays). The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as [`VRDisplay.hasExternalDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/hasExternalDisplay). This promise may be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed)
+Once you determine that the WebVR API exists, make a call to [`navigator.getVRDisplays`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays). The promise returned by this method will only resolve with an entry if a headset is plugged in - which is always true on a mobile but not always the case on desktop. If a VRDisplay is returned, examine the various attributes to determine the capability and state of the returned device such as [`VRDisplay.hasExternalDisplay`](https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities/hasExternalDisplay). This promise will be rejected if the system is not capable of supporting WebVR (eg, if no drivers are installed or the machine does not support WebVR). If rejected, you can consider falling back on the browser orientation API.
 
 # Sample code
 ## The Enter VR button
