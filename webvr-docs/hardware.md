@@ -20,9 +20,9 @@ Hand controllers will also be available shortly. See [Windows Mixed Reality holi
 
 Links to the Microsoft Store for purchasing headsets:
 
-* [HP Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/hp-windows-mixed-reality-headset-developer-edition/91thzqtvgspf/lpmq)
+* [VR and Mixed Reality headsets](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets)
 
-* [Acer Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/acer-windows-mixed-reality-headset-developer-edition/8pb4twx13m2n/7zt9)
+* [HP Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/hp-windows-mixed-reality-headset-developer-edition/91thzqtvgspf/lpmq)
 
 
 ## Alternatives to headsets
