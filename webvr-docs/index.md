@@ -77,10 +77,6 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
   </ul>
   
 ---
-<h2>Microsoft Edge Web Summit 2017 Presentation: Mixed Reality in Microsoft Edge with WebVR</h2>
-
-> [!VIDEO https://channel9.msdn.com/Events/WebPlatformSummit/Microsoft-Edge-Web-Summit-2017/ES12/player]
----
 
 <h2>Reference</h2>
 
