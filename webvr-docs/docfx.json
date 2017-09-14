@@ -32,7 +32,8 @@
     "globalMetadata": {
       "titleSuffix": "WebVR",
       "ms.topic": "article",
-      "ms.prod": "webvr",
+      "ms.prod": "MicrosoftEdge",
+      "ms.technology": "webvr",
       "keywords": "webvr, mixed reality, holographic, virtual reality, vr",
       "uhfHeaderId": "MSDocsHeader-MSEdge"
     },
