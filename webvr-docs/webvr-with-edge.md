@@ -51,7 +51,7 @@ To experience WebVR content on a Windows Mixed Reality headset (using hardware o
 ## Test WebVR support with your headset
 
 The CodePen embedded below should enable you to test support for your VR headset with the Microsoft Edge. Just click the headset icon below.
-<iframe height='300' scrolling='no' title='Try WebVR in Micrsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>Try WebVR in Micrsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Try WebVR in Micrsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>Try WebVR in Micrsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 Or try viewing this 360-degree photograph from the middle of Greenlake in Seattle, WA.
