@@ -24,11 +24,15 @@ Hand controllers will also be available shortly. See [Windows Mixed Reality holi
 
 * [Lenovo Explorer™ immersive headset](http://blog.lenovo.com/en/blog/lenovo-unveils-the-lenovo-explorer-immersive-headset-for-windows-mixed-real)
 
-* [Dell Mixed Reality Headset](https://blog.dell.com/en-us/dell-mixed-reality-headset-develops-further/)
+* [Dell Mixed Reality Headset](https://blog.dell.com/en-us/dell-mixed-reality-headset-develops-further/). You can [preorder the hardware here](http://www.dell.com/en-us/shop/virtual-reality/ar/8336?~ck=bt).
 
 * [Acer Mixed Realtity Headset](https://www.acer.com/ac/en/US/content/series-features/hmd)
 
 * [Acer Mixed Reality Headset with Motion Controller](https://www.acer.com/ac/en/US/content/series/wmr)
+
+## Is your PC ready?
+
+Download [this app](https://www.microsoft.com/en-us/store/p/windows-mixed-reality-pc-check/9nzvl19n7cnc) to confirm your PC will work with Mixed Reality hardware.
 
 ## Alternatives to headsets
 
