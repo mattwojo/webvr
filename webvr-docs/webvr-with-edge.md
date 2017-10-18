@@ -25,7 +25,7 @@ The Microsoft Edge browser (build 15002+ with Windows 10 Creators Update) now su
 - Engage users with 3D interfaces and game controllers.
 - Play Babylon.js 3D games right in your browser.
 
-**[Test it below](#test-webvr-support-with-your-headset) or [see some demos](demos.md).*
+<!-- **[Test it below](#test-webvr-support-with-your-headset) or [see some demos](demos.md).* -->
 
 ## Setting up your Mixed Reality headset
 
@@ -50,17 +50,20 @@ To experience WebVR content on a Windows Mixed Reality headset (using hardware o
 
 ## Test WebVR support with your headset
 
-The CodePen embedded below should enable you to test support for your VR headset with the Microsoft Edge. Just click the headset icon below.
-<iframe height='300' scrolling='no' title='Try WebVR in Micrsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>Try WebVR in Micrsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+The code samples below (embedded using [CodePen](//codepen.io/)) should enable you to test support for your VR headset with the Microsoft Edge. Just click the headset icon to enter WebVR mode.
+
+A simple WebVR sample built using [Babylon.js](//www.babylonjs.com/): 
+<iframe height='300' scrolling='no' title='WebVR sample in Microsoft Edge with BabylonJS' src='//codepen.io/MicrosoftEdgeDocumentation/embed/QqrXLM/?height=300&theme-id=31247&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/QqrXLM/'>WebVR sample in Microsoft Edge with BabylonJS</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Or try viewing this 360-degree photograph from the middle of Greenlake in Seattle, WA.
+A simple WebVR sample built using [A-Frame](//aframe.io): 
+<iframe height='300' scrolling='no' title='WebVR sample in Micrsoft Edge with A-frame' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>WebVR sample in Micrsoft Edge with A-frame</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+A simple WebVR sample for viewing a 360-degree photograph -- this photo is from the middle of Greenlake in Seattle, WA (coded using [A-frame](//aframe.io)):
 
 <iframe height='300' scrolling='no' title='WebVR 360-degree image with Microsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/MEgBJd/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/MEgBJd/'>WebVR 360-degree image with Microsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
-We used [A-Frame](https://aframe.io), a web framework for building VR experiences, to set up these simple VR tests and embedded them using [CodePen](https://codepen.io/).
-
 
 ## Play your 3D Babylon.js game in the Microsoft Edge browser by adding WebVR support
 
