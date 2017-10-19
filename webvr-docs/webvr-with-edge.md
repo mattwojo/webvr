@@ -31,13 +31,13 @@ The Microsoft Edge browser (build 15002+ with Windows 10 Creators Update) now su
 
 If you have a Windows Mixed Reality headset, follow the [Immersive headset setup guide](//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup) to get started. If you do not have a physical device, you can instead use the [Windows Mixed Reality simulator](//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator) to develop and test your WebVR experience.
 
-- Ensure you have a 64-bit version of Windows 10 ([Check your compatibility](//developer.microsoft.com/en-us/windows/mixed-reality/check_your_compatibility))
+- Ensure you have a 64-bit version of Windows 10 -- [Check your compatibility](//developer.microsoft.com/en-us/windows/mixed-reality/check_your_compatibility)
 - Ensure you are running the [Windows 10 Fall Creators Update](//support.microsoft.com/en-us/help/4028685/windows-10-get-the-fall-creators-update) 
 - [How to launch the Mixed Reality Portal](//developer.microsoft.com/en-us/windows/mixed-reality/install_windows_mixed_reality)
-- [Connect your Headset](//developer.microsoft.com/en-us/windows/mixed-reality/plug_in_your_headset) or [turn on Simulation]((//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator)
+- [Connect your Headset](//developer.microsoft.com/en-us/windows/mixed-reality/plug_in_your_headset) or [turn on Simulation](//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator)
 
 ### Additional resources: 
-- ([Where can I buy a Windows Mixed Reality headset? + other FAQs](//developer.microsoft.com/en-us/windows/mixed-reality/before_you_buy_-_faqs#when_can_i_buy_a_windows_mixed_reality_headset.3F))
+- [Where can I buy a Windows Mixed Reality headset? + other FAQs](//developer.microsoft.com/en-us/windows/mixed-reality/before_you_buy_-_faqs#when_can_i_buy_a_windows_mixed_reality_headset.3F)
 - [How to set up Motion Controllers, Room Boundary, Speech](//developer.microsoft.com/en-us/windows/mixed-reality/set_up_windows_mixed_reality#set_up_your_motion_controllers)
 -  [Troubleshooting](//developer.microsoft.com/en-us/windows/mixed-reality/troubleshooting_windows_mixed_reality)
 
