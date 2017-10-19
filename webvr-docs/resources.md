@@ -55,7 +55,8 @@ Here are some links to useful resources and documentation regarding WebVR.
 ## Video Resources
 
 ### Microsoft Edge Web Summit 2017 WebVR Presentation
-<iframe src="https://channel9.msdn.com/Events/WebPlatformSummit/Microsoft-Edge-Web-Summit-2017/ES12/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
+> [!VIDEO https://channel9.msdn.com/Events/WebPlatformSummit/Microsoft-Edge-Web-Summit-2017/ES12/player]
 
 
 ### Build 2017: WebVR--Adding VR to your web sites and web apps
@@ -69,8 +70,8 @@ Here are some links to useful resources and documentation regarding WebVR.
 
 ### Introduction to Mixed Reality
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_xpI0JosYUk" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/_xpI0JosYUk]
 
 ### Using motion controllers
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/1nlcdDNOdm8]
