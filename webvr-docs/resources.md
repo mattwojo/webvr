@@ -1,6 +1,6 @@
 
 ---
-title: Resources
+title: WebVR Resources
 description: Resources and Links. 
 author: GrantMeStrength
 ms.author: jken
@@ -11,9 +11,9 @@ ms.technology: webvr
 keywords: WebVR Resources Links
 ---
 
-# Resources
+# WebVR Resources
 
-Here are some links to useful resources and documentation.
+Here are some links to useful resources and documentation regarding WebVR.
 
 ## General
 
@@ -52,27 +52,26 @@ Here are some links to useful resources and documentation.
 * [WebVR Developers on LinkedIn](https://www.linkedin.com/groups/13500607/profile)
 * [Microsoft MR Community](https://developer.microsoft.com/en-us/windows/mixed-reality/community)
 
-## Videos from Build 2017
+## Video Resources
 
-Learn more about WebVR by watching these presentations from Build 2017, and other related content.
+### Microsoft Edge Web Summit 2017 WebVR Presentation
+
+> [!VIDEO https://channel9.msdn.com/Events/WebPlatformSummit/Microsoft-Edge-Web-Summit-2017/ES12/player]
+
+
+### Build 2017: WebVR--Adding VR to your web sites and web apps
 
 > [!VIDEO https://channel9.msdn.com/Events/Build/2017/P4097/player]
 
-<i>WebVR: Adding VR to your web sites and web apps.</i>
-
+### Build 2017: Creating immersive experiences on the web, from mobiles to VR devices, with WebVR
 
 > [!VIDEO https://channel9.msdn.com/Events/Build/2017/T6987/player]
 
-<i>Creating immersive experiences on the web, from mobiles to VR devices, with WebVR.</i>
 
-## Introduction to Mixed Reality
+### Introduction to Mixed Reality
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/_xpI0JosYUk]
 
-<i>Using motion controllers.</i>
+### Using motion controllers
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_xpI0JosYUk" frameborder="0" allowfullscreen></iframe>
-
-<i>Introducing Mixed Reality.</i>
-
-
+> [!VIDEO https://www.youtube.com/embed/1nlcdDNOdm8]
