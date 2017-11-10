@@ -1,4 +1,5 @@
 ---
+redirect_url: https://docs.microsoft.com/en-us/microsoft-edge/webvr/webvr-with-edge
 title: Demos
 description: WebVR demo apps. 
 author: GrantMeStrength
