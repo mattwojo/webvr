@@ -135,5 +135,8 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
         </div>
         </a>
     </li>
-    
 </ul>
+
+A simple WebVR sample built using [Babylon.js](//www.babylonjs.com/): 
+<iframe height='300' scrolling='no' title='BabylonJS with WebVR simple demo' src='//codepen.io/MicrosoftEdgeDocumentation/embed/QqrXLM/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/QqrXLM/'>BabylonJS with WebVR simple demo</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
