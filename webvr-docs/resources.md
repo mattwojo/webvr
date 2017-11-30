@@ -1,4 +1,3 @@
-
 ---
 title: WebVR Resources
 description: Resources and Links. 
