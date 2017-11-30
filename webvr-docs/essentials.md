@@ -67,9 +67,9 @@ Once you determine that the WebVR API exists, make a call to [`navigator.getVRDi
 ## The Enter VR button
 The Enter VR button is a visual cue that your content can present to an external headset, so should be visible on systems that support the API, even no headset is plugged in. Feature detection can be used to determine the visibility (and enabled state) of the button.
 
-The button should conform to the general visual conventions that have been adopted by many sites: a simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus.
+The button should conform to the general visual conventions that have been adopted by many sites: a simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus. The Babylon.js library uses the following image.
 
-Typical Enter VR button image:
+
 ![Enter VR button from BabylonJS](img/enter-vr.png)
 
 It is helpful to bind a keyboard button, such as 'E', to the control.

@@ -97,6 +97,13 @@ Traditional gamepad button mappings are [documented](https://www.w3.org/TR/gamep
 if (gamepad.mapping === 'standard') console.log(gamepad.id + ' is a traditional gamepad');
 ```
 
+An example with traditional gamepad mapping can be seen in the following Babylon.js WebVR example. Pressing the `[0]` button of a gamepad starts the game, which corresponds to the `A` button of an Xbox controller.
+
+
+<iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI - WebVR' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/RjgpJd/?height=300&theme-id=31247&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RjgpJd/'>Babylon.js dino game using Babylon.GUI - WebVR</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
 Things get interesting with so many types of VR controllers available since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the spec for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
 
 >  It's recommended that buttons appear in decreasing order of importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array

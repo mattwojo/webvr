@@ -3,7 +3,7 @@ title: Hardware
 description: Hardware choices for WebVR development on Windows. 
 author: GrantMeStrength
 ms.author: jken
-ms.date: 09/10/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: webvr
@@ -12,19 +12,20 @@ keywords: WebVR hardware
 
 # WebVR Hardware
 
-To view WebVR content on Microsft Edge, you use a Windows Mixed Reality headset. These headsets connect to the HDMI and USB ports of a compatible desktop or laptop computer running the Windows 10 Fall Creators Update. Several Windows Mixed Reality developer edition headsets are available to purchase, and more will be soon.
+To view WebVR content on Microsft Edge, you use a Windows Mixed Reality headset. These headsets connect to the HDMI and USB ports of a compatible desktop or laptop computer running the Windows 10 Fall Creators Update.
 
-Hand controllers will also be available shortly. See [Windows Mixed Reality holiday update](https://blogs.windows.com/windowsexperience/2017/08/28/windows-mixed-reality-holiday-update/) for more information.
 
 ![Devices](img/windows-mr-headset.jpg)
 
 * [Purchase VR and Mixed Reality headsets in the Microsoft Store](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets)
 
+* [Samsung HMD Odyssey](https://www.samsung.com/us/computing/computing-accessories/computers/xe800zaa-hc1us-xe800zaa-hc1us/)
+
 * [HP Windows Mixed Reality Headset Developer Edition](https://www.microsoft.com/en-us/store/d/hp-windows-mixed-reality-headset-developer-edition/91thzqtvgspf/lpmq)
 
 * [Lenovo Explorer™ immersive headset](http://blog.lenovo.com/en/blog/lenovo-unveils-the-lenovo-explorer-immersive-headset-for-windows-mixed-real)
 
-* [Dell Mixed Reality Headset](https://blog.dell.com/en-us/dell-mixed-reality-headset-develops-further/). You can [preorder the hardware here](http://www.dell.com/en-us/shop/virtual-reality/ar/8336?~ck=bt).
+* [Dell Mixed Reality Headset](https://blog.dell.com/en-us/dell-mixed-reality-headset-develops-further/).
 
 * [Acer Mixed Realtity Headset](https://www.acer.com/ac/en/US/content/series-features/hmd)
 
