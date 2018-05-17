@@ -3,7 +3,7 @@ title: WebVR with Microsoft Edge
 description: Introduction to using WebVR with the Microsoft Edge browser.
 author: mattwojo
 ms.author: mattwoj
-ms.date: 09/11/2017
+ms.date: 05/17/2018
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: webvr
@@ -12,7 +12,7 @@ keywords: WebVR, Microsoft Edge
 
 # Using WebVR with Microsoft Edge
 
-The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or later) supports immersive 3D Virtual Reality (VR) applications on the web using the WebVR 1.1 JavaScript API. Viewing WebVR content requires a [Windows Mixed Reality headset](hardware.md), or the [Windows Mixed Reality Portal Simulator](//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator) (accessible via Developer Mode).
+The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or later) supports immersive 3D Virtual Reality (VR) applications on the web using the WebVR 1.1 JavaScript API. Viewing WebVR content requires a [Windows Mixed Reality headset](hardware.md), or the [Windows Mixed Reality Portal Simulator](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator) (accessible via Developer Mode).
 
 > [!Note]
 > To check which version of Microsoft Edge you currently have installed:
@@ -21,7 +21,9 @@ The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or 
 > 3. Select **Settings**.
 > 4. Scroll down to find your version number under the **About this app** heading.
 >
-> Updates to Edge are automatically installed when Windows 10 is updated. To keep Edge up to date, you need to keep Windows 10 up to date. To see which version of Windows 10 your device is currently running, select the **Start** button, then **Settings** > **System** > **About**. To get Microsoft Edge build 15002+, you must be running the Windows 10 Creators Update or later. Go to the [Microsoft software download website](https://www.microsoft.com/software-download/windows10), and select **Update now** to install the latest version of Windows 10.
+> Updates to Edge are automatically installed when Windows 10 is updated. To keep Edge up to date, you need to keep Windows 10 up to date. To see which version of Windows 10 your device is currently running, select the **Start** button, then **Settings** > **System** > **About**.
+>
+> To get Microsoft Edge build 15002+, you must be running the Windows 10 Creators Update or later. Go to the [Microsoft software download website](https://www.microsoft.com/software-download/windows10), and select **Update now** to install the latest version of Windows 10. While technically support for WebVR was added to Edge in the Creators Update, we highly recommend that you run at least the Fall Creators Update, as there were many bug fixes and important changes added.
 >
 > The WebVR API surface area is present at all times within Microsoft Edge. However, a call to [getVRDisplays](https://developer.mozilla.org/docs/Web/API/Navigator/getVRDisplays) will only return a headset if the operating system has been placed in Developer Mode, and either a headset is plugged in or the simulator has been turned on.
 
@@ -43,12 +45,12 @@ Additionally, you can now run WebVR inside WebView controls in Windows 10 apps. 
 
 ## Setting up your Mixed Reality headset
 
-If you have a Windows Mixed Reality headset, follow the [Immersive headset setup guide](//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup) to get started. If you do not have a physical device, you can instead use the [Windows Mixed Reality simulator](//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator) to develop and test your WebVR experience.
+If you have a Windows Mixed Reality headset, follow the [Immersive headset setup guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start) to get started. If you do not have a physical device, you can instead use the [Windows Mixed Reality simulator](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator) to develop and test your WebVR experience.
 
 - Ensure you have a 64-bit version of Windows 10&mdash;[Check your compatibility](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
-- Ensure you are running the [Windows 10 Fall Creators Update](//support.microsoft.com/en-us/help/4028685/windows-10-get-the-fall-creators-update)
+- Ensure your Windows 10 installation is [up-to-date](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 - [How to launch the Mixed Reality Portal](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/install-windows-mixed-reality)
-- [Connect your Headset](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/plug-in-your-headset) or [turn on Simulation](//developer.microsoft.com/en-us/windows/mixed-reality/using_the_windows_mixed_reality_simulator)
+- [Connect your Headset](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/plug-in-your-headset) or [turn on Simulation](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator)
 
 ### Additional resources
 
