@@ -29,7 +29,7 @@ The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or 
 
 ## What's new in the Windows 10 April 2018 Update
 
-With the Windows 10 April 2018 Update, you can now run WebVR inside JavaScript/HTML Windows 10 applications, including PWAs (Progressive Web Apps). See [Progressive Web Apps on Windows](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) for more information about creating PWAs.
+With the Windows 10 April 2018 Update, you can now run WebVR inside JavaScript/HTML Windows 10 applications, including PWAs (Progressive Web Apps). See [WebVR in Progressive Web Apps](webvr-in-pwas.md) for more information.
 
 Additionally, you can now run WebVR inside WebView controls in Windows 10 apps. See [Microsoft Edge WebView for Windows 10 apps](https://docs.microsoft.com/microsoft-edge/webview) for more information about WebView.
 
