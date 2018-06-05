@@ -164,6 +164,10 @@ Now that we have a 3D Babylon.js experience working in our PWA, we can easily ad
 
 2. Run the app. At first, you will just see a blank screen. Attach your Windows Mixed Reality immersive headset, open the Mixed Reality Portal, and click the screen with the mouse. Put on your headset, and you should see the scene we just created in VR!
 
+## Publishing your PWA
+
+One of the big benefits of Progressive Web Apps is that they can be published to the Microsoft Store, where they will have a potential audience the size of the entire Windows 10 install base. To learn more about publishing your PWA to the Store, see [Progressive Web Apps in the Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store).
+
 ## See also
 
 * [Babylon.js](https://www.babylonjs.com/)
