@@ -47,42 +47,42 @@ Now we will add a simple 3D experience to our web app using Babylon.js.
 
 3. Add the following code to the file. This code initializes Babylon.js and creates a simple scene:
 
-```js
-// Get the canvas element 
-var canvas = document.getElementById("renderCanvas");
+    ```js
+    // Get the canvas element 
+    var canvas = document.getElementById("renderCanvas");
 
-// Generate the BABYLON 3D engine
-var engine = new BABYLON.Engine(canvas, true);
+    // Generate the BABYLON 3D engine
+    var engine = new BABYLON.Engine(canvas, true);
 
-var createScene = function () {
+    var createScene = function () {
 
-    // Create the scene space
-    var scene = new BABYLON.Scene(engine);
+        // Create the scene space
+        var scene = new BABYLON.Scene(engine);
 
-    // Add a camera to the scene and attach it to the canvas
-    var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, BABYLON.Vector3.Zero(), scene);
-    camera.attachControl(canvas, true);
+        // Add a camera to the scene and attach it to the canvas
+        var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, BABYLON.Vector3.Zero(), scene);
+        camera.attachControl(canvas, true);
 
-    // Add lights to the scene
-    var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-    var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+        // Add lights to the scene
+        var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+        var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
-    // This is where you create and manipulate meshes
-    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, scene);
+        // This is where you create and manipulate meshes
+        var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, scene);
 
-    return scene;
-};
+        return scene;
+    };
 
-var scene = createScene(); //Call the createScene function
+    var scene = createScene(); //Call the createScene function
 
-engine.runRenderLoop(function () { // Register a render loop to repeatedly render the scene
-    scene.render();
-});
+    engine.runRenderLoop(function () { // Register a render loop to repeatedly render the scene
+        scene.render();
+    });
 
-window.addEventListener("resize", function () { // Watch for browser/canvas resize events
-    engine.resize();
-});
-```
+    window.addEventListener("resize", function () { // Watch for browser/canvas resize events
+        engine.resize();
+    });
+    ```
 
 4. In **layout.pug** (in the **views** folder), add the following code to the `head` block. This adds the scripts necessary for Babylon.js:
 
