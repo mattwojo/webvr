@@ -86,41 +86,41 @@ Now we will add a simple 3D experience to our web app using Babylon.js.
 
 4. In **layout.pug** (in the **views** folder), add the following code to the `head` block. This adds the scripts necessary for Babylon.js:
 
-```pug
-script(src="https://cdn.babylonjs.com/babylon.js")
-script(src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js")
-script(src="https://code.jquery.com/pep/0.4.1/pep.js")
-```
+    ```pug
+    script(src="https://cdn.babylonjs.com/babylon.js")
+    script(src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js")
+    script(src="https://code.jquery.com/pep/0.4.1/pep.js")
+    ```
 
 5. Replace the code in the `body` block with the following code:
 
-```pug
-canvas(id="renderCanvas", touch-action="none")
-script(src='/javascripts/main.js')
-```
+    ```pug
+    canvas(id="renderCanvas", touch-action="none")
+    script(src='/javascripts/main.js')
+    ```
 
 6. In **main.css** (under **public > stylesheets**), remove the `body` block and add the following code:
 
-```css
-html, body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+    ```css
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-#renderCanvas {
-    width: 100%;
-    height: 100%;
-}
-```
+    #renderCanvas {
+        width: 100%;
+        height: 100%;
+    }
+    ```
 
 7. In **index.js** (in the **routes** folder), replace the `res.render` call (line 7) with the following:
 
-```js
-res.render('index');
-```
+    ```js
+    res.render('index');
+    ```
 
 8. In **index.pug** (in the **views** folder), remove lines 3-5 (the `block` section).
 
@@ -134,33 +134,33 @@ Now that we have a 3D Babylon.js experience working in our PWA, we can easily ad
 
 1. In **main.js**, replace the `createScene` function (should start on line 7) with the following code:
 
-```js
-var createScene = function () {
+    ```js
+    var createScene = function () {
 
-    // Create the scene space
-    var scene = new BABYLON.Scene(engine);
+        // Create the scene space
+        var scene = new BABYLON.Scene(engine);
 
-    // Add a camera to the scene and attach it to the canvas
-    var camera = new BABYLON.WebVRFreeCamera("Camera", new BABYLON.Vector3(0, 0, 0), scene);
+        // Add a camera to the scene and attach it to the canvas
+        var camera = new BABYLON.WebVRFreeCamera("Camera", new BABYLON.Vector3(0, 0, 0), scene);
 
-    scene.onPointerDown = function () {
-        scene.onPointerDown = undefined;
-        camera.attachControl(canvas, true);
+        scene.onPointerDown = function () {
+            scene.onPointerDown = undefined;
+            camera.attachControl(canvas, true);
+        };
+
+        // Add lights to the scene
+        var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+        var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+
+        // This is where you create and manipulate meshes
+        var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, scene);
+        sphere.position.z = 10;
+
+        return scene;
     };
+    ```
 
-    // Add lights to the scene
-    var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-    var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
-
-    // This is where you create and manipulate meshes
-    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, scene);
-    sphere.position.z = 10;
-
-    return scene;
-};
-```
-
-Basically, we are changing the camera to work in VR (the `WebVRFreeCamera`), making it so the user must click the screen to start the experience, and repositioning the sphere to be in front of the viewer.
+    Basically, we are changing the camera to work in VR (the `WebVRFreeCamera`), making it so the user must click the screen to start the experience, and repositioning the sphere to be in front of the viewer.
 
 2. Run the app. At first, you will just see a blank screen. Attach your Windows Mixed Reality immersive headset, open the Mixed Reality Portal, and click the screen with the mouse. Put on your headset, and you should see the scene we just created in VR!
 
