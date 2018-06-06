@@ -12,18 +12,20 @@ keywords: WebVR, progressive web app, pwa
 
 # WebVR in Progressive Web Apps
 
-As of the Windows 10 April 2018 Update (version 1803, build 17134), WebVR is supported in [Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) (PWAs). PWAs combine the best of the web and native apps, allowing you to take your existing websites and publish them to the Microsoft Store as Windows 10 applications. You can make your PWAs even better by adding engaging WebVR functionality, providing deeper, more immersive experiences.
+As of the [Windows 10 April 2018 Update](https://blogs.windows.com/windowsexperience/2018/04/27/make-the-most-of-your-time-with-the-new-windows-10-update/) (version 1803, build 17134, [EdgeHTML 17](https://aka.ms/devguide_edgehtml_17)), WebVR is supported in [Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) (PWAs). PWAs combine the best of the web and native apps, allowing you to take your existing websites and publish them to the Microsoft Store as Windows 10 applications. By adding WebVR functionality to provide deeper, more immersive experiences, you can create PWAs that are exceptionally engaging.
+
+This article extends the tutorial in [Get started with Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started), and will show you how to add WebVR to your PWA (or other type of web app) using the Babylon.js library.
 
 ## Add WebVR to a PWA with Babylon.js
 
 [Babylon.js](https://www.babylonjs.com/) makes it easy to create WebVR experiences, and in the following example we will use it to add a simple WebVR experience to an existing PWA. We will be using the default project that is created in Visual Studio with the **Basic Node.js Express 4 Application** template. While we will be using Node.js, you can apply this to other web application frameworks as well.
 
-### Prerequisites
-
 Though you can use any web development IDE and framework you prefer, to follow along with this tutorial, you will need the following:
 
 * [Visual Studio 2017](https://www.visualstudio.com/downloads/) (any edition&mdash;Community is free)
     * When installing, make sure to select the **Universal Windows Platform development** and **Node.js development** workloads. If you've already installed Visual Studio 2017, you can open the **Visual Studio Installer** and click **Modify** under your installation to install the workloads.
+* Either a **working PWA** (see [Get started with Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) for info on how to create one) or a **simple web app**. If you have neither of these, follow the next section to create one.
+* A [Windows Mixed Reality immersive headset](https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details)
 
 ### Create the web app
 
@@ -164,9 +166,11 @@ Now that we have a 3D Babylon.js experience working in our PWA, we can easily ad
 
 2. Run the app. At first, you will just see a blank screen. Attach your Windows Mixed Reality immersive headset, open the Mixed Reality Portal, and click the screen with the mouse. Put on your headset, and you should see the scene we just created in VR!
 
-## Publishing your PWA
+## Going further
 
-One of the big benefits of Progressive Web Apps is that they can be published to the Microsoft Store, where they will have a potential audience the size of the entire Windows 10 install base. To learn more about publishing your PWA to the Store, see [Progressive Web Apps in the Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store).
+Using WebVR together with the capabilities of a PWA can yield some great benefits. For example, you could use service workers to cache your Babylon.js script files for offline access. Additionally, access to WinRT APIs opens up many more possibilities, including using the [Windows.UI.Input.Spatial namespace](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial) and other MR-specific APIs.
+
+Another benefit of Progressive Web Apps is that they can be published to the Microsoft Store, where they will have a potential audience the size of the entire Windows 10 install base. To learn more about publishing your PWA to the Store, see [Progressive Web Apps in the Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store).
 
 ## See also
 
