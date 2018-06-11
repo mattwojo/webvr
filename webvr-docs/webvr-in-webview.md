@@ -45,10 +45,20 @@ private void MyWebView_PermissionRequested(
 ```
 
 ```javascript
+var wvprocess = new MSWebViewProcess();
 
+// WebViews created with the same MSWebViewProcess object share the same process
+wvprocess.CreateWebViewAsync().then(function (webview) {
+    webview.navigate("https://webvr.info/samples/03-vr-presentation.html");
+    document.body.appendChild(webview);
+    webview.addEventListener("MSWebViewPermissionRequested", e => {
+        e.permissionRequest.allow();
+    });
+});
 ```
 
 ## See also
 
 * [Microsoft Edge WebView for Windows 10 apps](https://docs.microsoft.com/microsoft-edge/webview)
+* [WebView Class (Windows.UI.Xaml.Controls)](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview)
 * [WebVR Developer's Guide](https://docs.microsoft.com/microsoft-edge/webvr/)
