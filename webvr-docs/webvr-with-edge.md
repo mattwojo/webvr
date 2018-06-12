@@ -3,7 +3,7 @@ title: WebVR with Microsoft Edge
 description: Introduction to using WebVR with the Microsoft Edge browser.
 author: mattwojo
 ms.author: mattwoj
-ms.date: 05/17/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: webvr
@@ -31,7 +31,7 @@ The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or 
 
 With the Windows 10 April 2018 Update, you can now run WebVR inside JavaScript/HTML Windows 10 applications, including PWAs (Progressive Web Apps). See [WebVR in Progressive Web Apps](webvr-in-pwas.md) for more information.
 
-Additionally, you can now run WebVR inside WebView controls in Windows 10 apps. See [WebVR in WebView](webvr-in-webview.md) for more information about WebView.
+Additionally, you can now run WebVR inside WebView controls in Windows 10 apps. See [WebVR in WebView](webvr-in-webview.md) for more information.
 
 ## You can do a lot with WebVR on Microsoft Edge
 
