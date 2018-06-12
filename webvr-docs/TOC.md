@@ -2,6 +2,7 @@
 ## [WebVR functionality checklist](essentials.md)
 ## [Using WebVR with Microsoft Edge](webvr-with-edge.md)
 ## [WebVR in Progressive Web Apps](webvr-in-pwas.md)
+## [WebVR in WebView](webvr-in-webview.md)
 ## [Input](input.md)
 ## [Hardware](hardware.md)
 ## [Resources](resources.md)
