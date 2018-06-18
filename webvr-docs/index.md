@@ -45,6 +45,29 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/sql-database-develop.svg" alt="Develop illustration" data-linktype="external" class="x-hidden-focus"/>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Development</h3>
+                        <p>Read about best practices for handling input in WebVR, and how to develop for WebVR on Windows 10.</p>
+                        <br/>
+                        <ul>
+                            <li><a href="input.md">Input</a></li>
+                            <li><a href="webvr-in-pwas.md">WebVR in Progressive Web Apps</a></li>
+                            <li><a href="webvr-in-webview.md">WebVR in WebView</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
 </ul>
 
 <ul class="panelContent cardsFTitle">
