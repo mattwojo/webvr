@@ -1,6 +1,6 @@
 # [WebVR Developer's Guide](index.md)
 ## Fundamentals
-### What is it?
+### What is WebVR?
 ### [Hardware](hardware.md)
 ### [Using WebVR with Microsoft Edge](webvr-with-edge.md)
 ## Development
