@@ -32,10 +32,13 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Learn about Windows 10 Apps</h3>
-                        <p>Windows 10 and the Universal Windows Platform let you build apps that work and look great across all Windows device types, or update existing apps with modern features.</p>
+                        <h3>Fundamentals</h3>
+                        <p>Learn about what WebVR is, and the necessary first steps to get set up.</p>
+                        <br/>
                         <ul>
-                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">What's a UWP app?</a></li>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">What is WebVR?</a></li>
+                            <li><a href="hardware.md">Hardware</a></li>
+                            <li><a href="webvr-with-edge.md">Using WebVR with Microsoft Edge</a></li>
                         </ul>
                     </div>
                 </div>
