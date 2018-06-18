@@ -21,6 +21,29 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 <iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI - WebVR' src='//codepen.io/MSEdgeDev/embed/RjgpJd/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MSEdgeDev/pen/RjgpJd'>Babylon.js dino game using Babylon.GUI - WebVR</a> by Microsoft Edge Docs (<a href='https://codepen.io/MSEdgeDev'>@MSEdgeDev</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+<ul class="cardsK panelContent">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/media/illustrations/biztalk-developer-documentation-1.svg" alt="Overview illustration" data-linktype="external" class="x-hidden-focus"/>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Learn about Windows 10 Apps</h3>
+                        <p>Windows 10 and the Universal Windows Platform let you build apps that work and look great across all Windows device types, or update existing apps with modern features.</p>
+                        <ul>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">What's a UWP app?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="./essentials.md">
