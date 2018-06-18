@@ -16,6 +16,8 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
 
 Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once you've plugged in a Windows Mixed Reality headset and an Xbox controller. Click in the window to enter immersive view, then press A on the controller to start the experience.
 
+<br/>
+
 <iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI - WebVR' src='//codepen.io/MSEdgeDev/embed/RjgpJd/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MSEdgeDev/pen/RjgpJd'>Babylon.js dino game using Babylon.GUI - WebVR</a> by Microsoft Edge Docs (<a href='https://codepen.io/MSEdgeDev'>@MSEdgeDev</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
