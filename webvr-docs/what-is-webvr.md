@@ -23,6 +23,8 @@ Today, there are many different VR devices on the market, with varying levels of
 
 With WebVR, however, you can experience virtual reality in a platform- and device-agnostic way. This way, when you're developing a VR experience, you no longer have to choose which devices you're going to target, and develop them as separate experiences. You simply write it once using WebVR APIs, and you're automatically cross-platform.
 
+Additionally, rather than creating a VR application that users have to download, which creates friction, a WebVR experience simply exists on the web, just like any other website. All the customer has to do is navigate to the site, plug in a headset, and they're good to go.
+
 ## How do I develop WebVR experiences?
 
 To get started developing with WebVR, you'll need a few things first:
