@@ -94,25 +94,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="./essentials.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_tasks.svg" alt="Essentials Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>WebVR functionality checklist</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-
-    <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality">
         <div class="cardSize">
             <div class="cardPadding">
@@ -130,7 +111,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </div>
         </a>
     </li>
-
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_hardware_details">
         <div class="cardSize">
@@ -149,7 +129,24 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </div>
         </a>
     </li>
-
+    <li>
+        <a href="">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_code-samples.svg" alt="Code: Samples icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Demos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
   </ul>
   
 ---
