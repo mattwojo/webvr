@@ -43,3 +43,4 @@ Once you've determined that you can run WebVR, you can either develop using the 
 )
 * [WebXR Device API specification](https://github.com/immersive-web/webxr)
 * [Babylon.js official site](https://www.babylonjs.com/)
+* [Using WebVR with Microsoft Edge](webvr-with-edge.md)
