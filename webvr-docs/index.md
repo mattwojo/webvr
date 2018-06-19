@@ -92,6 +92,10 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
     </li>
 </ul>
 
+---
+
+<h2>More resources</h2>
+
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality">
@@ -148,10 +152,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </a>
     </li>
   </ul>
-  
----
-
-<h2>Reference</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -172,7 +172,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </div>
         </a>
     </li>
-
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality/community">
         <div class="cardSize">
@@ -191,7 +190,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </div>
         </a>
     </li>
-
     <li>
         <a href="//www.linkedin.com/groups/13500607/profile">
         <div class="cardSize">
