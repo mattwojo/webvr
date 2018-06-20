@@ -36,7 +36,7 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
                         <p>Learn about what WebVR is, and the necessary first steps to get set up.</p>
                         <br/>
                         <ul>
-                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">What is WebVR?</a></li>
+                            <li><a href="what-is-webvr.md">What is WebVR?</a></li>
                             <li><a href="hardware.md">Hardware</a></li>
                             <li><a href="webvr-with-edge.md">Using WebVR with Microsoft Edge</a></li>
                         </ul>
