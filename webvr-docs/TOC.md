@@ -1,4 +1,5 @@
 # [WebVR Developer's Guide](index.md)
+## [What is WebVR?](what-is-webvr.md)
 ## [WebVR functionality checklist](essentials.md)
 ## [Using WebVR with Microsoft Edge](webvr-with-edge.md)
 ## [WebVR in Progressive Web Apps](webvr-in-pwas.md)
