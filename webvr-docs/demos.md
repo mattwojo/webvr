@@ -18,9 +18,14 @@ You can either open each VR experience from your computer and then put on your h
 
 ## WebVR demos known to work in Edge
 
-The following demos are known to work in Edge with a Windows Mixed Reality immersive headset. To open a CodePen, make sure your headset is plugged in, and select the VR button in the bottom right of the window.
+The following demos are known to work in Edge with a Windows Mixed Reality immersive headset. To enter VR in a CodePen, make sure your headset is plugged in, and select the VR button in the bottom right of the window.
 
 Occasionally you may find that a VR experience doesn't load properly (it stays on a black screen with revolving white spheres). Simply exit the experience by pressing the Windows button on your controller, reload the page, and try again.
+
+If you don't have a VR headset, don't worry&mdash;these demos also work with the mouse. Simply hold the left mouse button down and drag the mouse around to turn the camera.
+
+> [!NOTE]
+> Sometimes, a CodePen might freeze if you try interacting with it on this page. Click **Edit on CodePen** in the upper right corner to view it on the CodePen website, where it should work fine.
 
 * Rendering and animating simple shapes using [Babylon.js](//www.babylonjs.com/):
 
