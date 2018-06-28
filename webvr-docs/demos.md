@@ -30,19 +30,19 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 * Rendering and animating simple shapes using [Babylon.js](//www.babylonjs.com/):
 
 <br/>
-<iframe height='300' scrolling='no' title='WebVR sample in Microsoft Edge with BabylonJS' src='//codepen.io/MicrosoftEdgeDocumentation/embed/QqrXLM/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/QqrXLM/'>WebVR sample in Microsoft Edge with BabylonJS</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='WebVR sample in Microsoft Edge with BabylonJS' src='//codepen.io/MicrosoftEdgeDocumentation/embed/QqrXLM/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/QqrXLM/'>WebVR sample in Microsoft Edge with BabylonJS</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 * Rendering and animating shapes using [A-Frame](//aframe.io):
 
 <br/>
-<iframe height='300' scrolling='no' title='WebVR sample in Micrsoft Edge with A-frame' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>WebVR sample in Micrsoft Edge with A-frame</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='WebVR sample in Micrsoft Edge with A-frame' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>WebVR sample in Micrsoft Edge with A-frame</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 * Viewing a 360-degree photograph using [A-frame](//aframe.io):
 
 <br/>
-<iframe height='300' scrolling='no' title='WebVR 360-degree image with Microsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/MEgBJd/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/MEgBJd/'>WebVR 360-degree image with Microsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='WebVR 360-degree image with Microsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/MEgBJd/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/MEgBJd/'>WebVR 360-degree image with Microsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 * [Sponza VR](https://www.babylonjs.com/demos/sponza/) (interior castle scene) using [Babylon.js](https://www.babylonjs.com/) by the Babylon.js team
