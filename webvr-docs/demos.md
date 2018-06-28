@@ -54,6 +54,12 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 * [Mansion VR](https://www.babylonjs.com/demos/mansionvr/) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
 
+* [View a basic mesh and interact with a GUI in WebVR](https://www.babylonjs-playground.com/#TAFSN0#2) (Babylon.js)
+    * Open the link, then select the VR button in the bottom right.
+
+* [Glowing Espilit](http://www.babylonjs.com/demos/glowingespilit/) (modern, open architecture demo) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
+    * Open the link, then select the VR button in the bottom right.
+
 ## See more
 
 * [Your mixed reality home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
