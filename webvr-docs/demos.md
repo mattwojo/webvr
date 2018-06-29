@@ -24,7 +24,7 @@ Occasionally you may find that a VR experience doesn't load properly (it stays o
 
 If you don't have a VR headset, don't worry&mdash;these demos also work with the mouse. Simply hold the left mouse button down and drag the mouse around to turn the camera.
 
-* Rendering and animating simple shapes using [Babylon.js](//www.babylonjs.com/):
+* [Rendering and animating simple shapes](https://codepen.io/MSEdgeDev/pen/QqrXLM) using [Babylon.js](//www.babylonjs.com/):
 
 <a href="https://codepen.io/MSEdgeDev/pen/QqrXLM">
     <img src="img/simple-shapes-demo.png" alt="A red cube and a blue sphere"/>
@@ -33,7 +33,7 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 <br/>
 <br/>
 
-* Rendering and animating shapes using [A-Frame](//aframe.io):
+* [Rendering and animating shapes](https://codepen.io/MSEdgeDev/pen/RLwjYL) using [A-Frame](//aframe.io):
 
 <a href="https://codepen.io/MSEdgeDev/pen/RLwjYL">
     <img src="img/simple-shapes-a-frame.png" alt="A red cube, blue sphere, and the Edge logo on a gray plane"/>
@@ -42,7 +42,7 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 <br/>
 <br/>
 
-* Viewing a 360-degree photograph using [A-frame](//aframe.io):
+* [Viewing a 360-degree photograph](https://codepen.io/MSEdgeDev/pen/MEgBJd) using [A-frame](//aframe.io):
 
 <a href="https://codepen.io/MSEdgeDev/pen/MEgBJd">
     <img src="img/360-photo-greenlake.png" alt="From the middle of Greenlake, Seattle, WA"/>
