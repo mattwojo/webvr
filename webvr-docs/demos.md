@@ -18,7 +18,7 @@ You can either open each VR experience from your computer and then put on your h
 
 ## WebVR demos known to work in Edge
 
-The following demos are known to work in Edge with a Windows Mixed Reality immersive headset. To enter VR in a CodePen, make sure your headset is plugged in, and select the VR button in the bottom right of the window.
+The following demos are known to work in Edge with a Windows Mixed Reality immersive headset. To open an experience, click on the picture or link. To enter VR, make sure your headset is plugged in, and select the VR button, which is usually in the bottom right of the window.
 
 Occasionally you may find that a VR experience doesn't load properly (it stays on a black screen with revolving white spheres). Simply exit the experience by pressing the Windows button on your controller, reload the page, and try again.
 
@@ -29,36 +29,56 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 
 * Rendering and animating simple shapes using [Babylon.js](//www.babylonjs.com/):
 
-<br/>
-<iframe height='300' scrolling='no' title='WebVR sample in Microsoft Edge with BabylonJS' src='//codepen.io/MicrosoftEdgeDocumentation/embed/QqrXLM/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/QqrXLM/'>WebVR sample in Microsoft Edge with BabylonJS</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<a href="https://codepen.io/MSEdgeDev/pen/QqrXLM">
+    <img src="img/simple-shapes-demo.png" alt="A red cube and a blue sphere"/>
+</a>
 
 * Rendering and animating shapes using [A-Frame](//aframe.io):
 
-<br/>
-<iframe height='300' scrolling='no' title='WebVR sample in Micrsoft Edge with A-frame' src='//codepen.io/MicrosoftEdgeDocumentation/embed/RLwjYL/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RLwjYL/'>WebVR sample in Micrsoft Edge with A-frame</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<a href="https://codepen.io/MSEdgeDev/pen/RLwjYL">
+    <img src="img/simple-shapes-a-frame.png" alt="A red cube, blue sphere, and the Edge logo on a gray plane"/>
+</a>
 
 * Viewing a 360-degree photograph using [A-frame](//aframe.io):
 
-<br/>
-<iframe height='300' scrolling='no' title='WebVR 360-degree image with Microsoft Edge' src='//codepen.io/MicrosoftEdgeDocumentation/embed/MEgBJd/?height=300&theme-id=31247&default-tab=result&embed-version=2?turn_off_js=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/MEgBJd/'>WebVR 360-degree image with Microsoft Edge</a> by Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<a href="https://codepen.io/MSEdgeDev/pen/MEgBJd">
+    <img src="img/360-photo-greenlake.png" alt="From the middle of Greenlake, Seattle, WA"/>
+</a>
 
 * [Sponza VR](https://www.babylonjs.com/demos/sponza/) (interior castle scene) using [Babylon.js](https://www.babylonjs.com/) by the Babylon.js team
     * Open the link, then select the **Switch to VR mode** button on the right.
 
+<a href="https://www.babylonjs.com/demos/sponza/">
+    <img src="img/sponza.png" alt="Interior castle scene"/>
+</a>
+
 * [Hill Valley VR](https://www.babylonjs.com/demos/hillvalleyvr/) using [Babylon.js](https://www.babylonjs.com/) by Camille Joly and Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
+
+<a href="https://www.babylonjs.com/demos/hillvalleyvr/">
+    <img src="img/hill-valley.png" alt="Hill Valley with DeLorean"/>
+</a>
 
 * [Mansion VR](https://www.babylonjs.com/demos/mansionvr/) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
 
+<a href="https://www.babylonjs.com/demos/mansionvr/">
+    <img src="img/mansion.png" alt="Creepy manion with dark clouds overhead"/>
+</a>
+
 * [View a basic mesh and interact with a GUI in WebVR](https://www.babylonjs-playground.com/#TAFSN0#2) (Babylon.js)
     * Open the link, then select the VR button in the bottom right.
 
+<a href="https://www.babylonjs-playground.com/#TAFSN0#2">
+    <img src="img/mesh-and-gui.png" alt="Multi-faced mesh and color wheel"/>
+</a>
+
 * [Glowing Espilit](http://www.babylonjs.com/demos/glowingespilit/) (modern, open architecture demo) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
+
+<a href="http://www.babylonjs.com/demos/glowingespilit/">
+    <img src="img/glowing-espilit.png" alt="Modern interior space with glass doors and skylights"/>
+</a>
 
 ## See more
 
