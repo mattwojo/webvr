@@ -10,5 +10,4 @@
 ## Resources
 ### [WebVR functionality checklist](essentials.md)
 ### [WebVR resources](resources.md)
-## Demos
-### Interesting stuff
+## [Demos](demos.md)
