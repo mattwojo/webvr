@@ -33,6 +33,9 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
     <img src="img/simple-shapes-demo.png" alt="A red cube and a blue sphere"/>
 </a>
 
+<br/>
+<br/>
+
 * Rendering and animating shapes using [A-Frame](//aframe.io):
 
 <a href="https://codepen.io/MSEdgeDev/pen/RLwjYL">
