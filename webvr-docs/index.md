@@ -18,13 +18,11 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 
 <br/>
 
-<ul class="cardsK panelContent">
-    <div class="card">
-        <a href="https://www.babylonjs.com/demos/sponza/">
-            <img src="img/sponza.png" alt="Interior castle scene"/>
-        </a>
-    </div>
-</ul>
+<div style="align-content:center">
+    <a href="https://www.babylonjs.com/demos/sponza/">
+        <img src="img/sponza.png" alt="Interior castle scene"/>
+    </a>
+</div>
 
 <ul class="cardsK panelContent">
     <li>
