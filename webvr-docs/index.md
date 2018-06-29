@@ -14,12 +14,11 @@ keywords: developer guide
 # WebVR Developer's Guide
 WebVR is an open standard JavaScript API that makes it possible to experience immersive 3D Virtual Reality (VR) applications using a web browser like Microsoft Edge and a supported VR headset.
 
-Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once you've plugged in a Windows Mixed Reality headset and an Xbox controller. Click in the window to enter immersive view, then press A on the controller to start the experience.
+Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once you've plugged in a Windows Mixed Reality headset. Click the picture below, then select the **Switch to VR mode** button on the right.
 
-<br/>
-
-<iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI - WebVR' src='//codepen.io/MSEdgeDev/embed/RjgpJd/?height=300&theme-id=31247&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/MSEdgeDev/pen/RjgpJd'>Babylon.js dino game using Babylon.GUI - WebVR</a> by Microsoft Edge Docs (<a href='https://codepen.io/MSEdgeDev'>@MSEdgeDev</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<a href="https://www.babylonjs.com/demos/sponza/">
+    <img src="img/sponza.png" alt="Interior castle scene"/>
+</a>
 
 <ul class="cardsK panelContent">
     <li>
