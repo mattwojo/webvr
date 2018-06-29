@@ -16,6 +16,8 @@ WebVR is an open standard JavaScript API that makes it possible to experience im
 
 Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once you've plugged in a Windows Mixed Reality headset. Click the picture below, then select the **Switch to VR mode** button on the right.
 
+<br/>
+
 <div class="cardSize">
     <a href="https://www.babylonjs.com/demos/sponza/">
         <img src="img/sponza.png" alt="Interior castle scene"/>
