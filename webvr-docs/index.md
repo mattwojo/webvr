@@ -20,7 +20,7 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 
 <div style="text-align:center">
     <a href="https://www.babylonjs.com/demos/sponza/">
-        <img src="img/sponza.png" alt="Interior castle scene"/>
+        <img src="img/sponza-big.png" alt="Interior castle scene"/>
     </a>
 </div>
 
