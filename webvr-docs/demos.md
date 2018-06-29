@@ -51,12 +51,18 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
     <img src="img/360-photo-greenlake.png" alt="From the middle of Greenlake, Seattle, WA"/>
 </a>
 
+<br/>
+<br/>
+
 * [Sponza VR](https://www.babylonjs.com/demos/sponza/) (interior castle scene) using [Babylon.js](https://www.babylonjs.com/) by the Babylon.js team
     * Open the link, then select the **Switch to VR mode** button on the right.
 
 <a href="https://www.babylonjs.com/demos/sponza/">
     <img src="img/sponza.png" alt="Interior castle scene"/>
 </a>
+
+<br/>
+<br/>
 
 * [Hill Valley VR](https://www.babylonjs.com/demos/hillvalleyvr/) using [Babylon.js](https://www.babylonjs.com/) by Camille Joly and Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
@@ -65,6 +71,9 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
     <img src="img/hill-valley.png" alt="Hill Valley with DeLorean"/>
 </a>
 
+<br/>
+<br/>
+
 * [Mansion VR](https://www.babylonjs.com/demos/mansionvr/) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
 
@@ -72,12 +81,18 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
     <img src="img/mansion.png" alt="Creepy manion with dark clouds overhead"/>
 </a>
 
+<br/>
+<br/>
+
 * [View a basic mesh and interact with a GUI in WebVR](https://www.babylonjs-playground.com/#TAFSN0#2) (Babylon.js)
     * Open the link, then select the VR button in the bottom right.
 
 <a href="https://www.babylonjs-playground.com/#TAFSN0#2">
     <img src="img/mesh-and-gui.png" alt="Multi-faced mesh and color wheel"/>
 </a>
+
+<br/>
+<br/>
 
 * [Glowing Espilit](http://www.babylonjs.com/demos/glowingespilit/) (modern, open architecture demo) using [Babylon.js](https://www.babylonjs.com/) by Michel Rousseau
     * Open the link, then select the VR button in the bottom right.
