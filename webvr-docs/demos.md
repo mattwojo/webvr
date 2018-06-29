@@ -3,7 +3,7 @@ title: Demos
 description: WebVR demo apps. 
 author: GrantMeStrength
 ms.author: jken
-ms.date: 06/21/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: webvr
