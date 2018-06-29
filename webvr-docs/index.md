@@ -4,7 +4,7 @@ title: WebVR Developer's Guide
 description: Guide to working with WebVR in Mixed Reality experiences.
 author: leweaver
 ms.author: leweaver
-ms.date: 08/01/2017
+ms.date: 06/29/2018
 ms.topic: landing-page
 ms.prod: microsoft-edge
 ms.technology: webvr
