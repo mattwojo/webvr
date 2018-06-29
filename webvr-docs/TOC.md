@@ -7,3 +7,4 @@
 ## [Input](input.md)
 ## [Hardware](hardware.md)
 ## [Resources](resources.md)
+## [Demos](demos.md)
