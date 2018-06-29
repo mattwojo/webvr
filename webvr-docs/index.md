@@ -18,7 +18,7 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 
 <br/>
 
-<div style="display:flex;align-items:center">
+<div style="text-align:center">
     <a href="https://www.babylonjs.com/demos/sponza/">
         <img src="img/sponza.png" alt="Interior castle scene"/>
     </a>
