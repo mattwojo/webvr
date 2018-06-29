@@ -42,6 +42,9 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
     <img src="img/simple-shapes-a-frame.png" alt="A red cube, blue sphere, and the Edge logo on a gray plane"/>
 </a>
 
+<br/>
+<br/>
+
 * Viewing a 360-degree photograph using [A-frame](//aframe.io):
 
 <a href="https://codepen.io/MSEdgeDev/pen/MEgBJd">
