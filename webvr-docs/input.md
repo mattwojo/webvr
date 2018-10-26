@@ -117,20 +117,28 @@ With the WebVR 1.1 API we can't reliably determine whether or not a controller h
 
 Known controllers and their mappings:
 
-</br> | Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | Oculus Go / GearVR controller | GearVR headset |
---- | --- | --- | --- | --- | --- | --- | --- |
-| **Control type** | **6DOF** | **6DOF** | **6DOF** | **3DOF** | **3DOF** | **3DOF** | **3DOF (Head-mounted)** |
-| **buttons[0]** | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Touchpad * | Touchpad * | Touchpad *
-| **buttons[1]** | Select * | Trigger * | Trigger * | Back | Menu ** | Trigger |
-| **buttons[2]** | Grasp | Grip | Grips | Outer Ring - Up | System ** | |
-| **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down | |
-| **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left | |
-| **buttons[5]** | | Surface | | Outer Ring - Right | |
-| **buttons[6]** | | Menu | |
-| **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X | | Touchpad X | Touchpad X |  Touchpad X |
-| **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y | | Trackpad Y | Touchpad Y |  Touchpad Y |
+</br> | Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote |
+--- | --- | --- | --- | --- |
+| **Control type** | **6DOF** | **6DOF** | **6DOF** | **3DOF** |
+| **buttons[0]** | Thumbstick | Thumbstick | Touchpad | Inner Ring * |
+| **buttons[1]** | Select * | Trigger * | Trigger * | Back |
+| **buttons[2]** | Grasp | Grip | Grips | Outer Ring - Up |
+| **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down |
+| **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left |
+| **buttons[5]** | | Surface | | Outer Ring - Right |
+| **buttons[6]** | | Menu |
+| **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X |
+| **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y |
 | **axes[2]** | Touchpad X |
 | **axes[3]** | Touchpad Y |
+
+</br> | Daydream Controller | Oculus Go / GearVR controller | GearVR headset |
+--- | --- | --- | --- |
+| **Control type** | **3DOF** | **3DOF** | **3DOF (Head-mounted)** |
+| **buttons[0]** | Touchpad * | Touchpad * | Touchpad * |
+| **buttons[1]** | Menu ** | Trigger |
+| **axes[0]** | Touchpad X | Touchpad X |  Touchpad X |
+| **axes[1]** | Touchpad Y | Touchpad Y |  Touchpad Y |
 
 * __*__ _Primary Button_
 * __**__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
