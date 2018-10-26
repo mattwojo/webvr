@@ -117,22 +117,20 @@ With the WebVR 1.1 API we can't reliably determine whether or not a controller h
 
 Known controllers and their mappings:
 
-</br> | Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | GearVR headset |
---- | --- | --- | --- | --- | --- | --- |
-| **Control type** | **6DOF** | **6DOF** | **6DOF** | **3DOF** | **6DOF** | **Head Mounted** |
-| **buttons[0]** | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Trackpad * |
-| **buttons[1]** | Select * | Trigger * | Trigger * | Back | Menu ** |
-| **buttons[2]** | Grasp | Grip | Grips | Outer Ring - Up | System ** |
-| **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down |
-| **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left |
-| **buttons[5]** | | Surface | | Outer Ring - Right |
-| **buttons[6]** | | Menu |
-| **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X | | Trackpad X |
-| **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y | | Trackpad Y |
+</br> | Windows Mixed Reality | Oculus Touch | Vive controller | Oculus Remote | Daydream Controller | Oculus Go / GearVR controller | GearVR headset |
+--- | --- | --- | --- | --- | --- | --- | --- |
+| **Control type** | **6DOF** | **6DOF** | **6DOF** | **3DOF** | **3DOF** | **3DOF** | **3DOF (Head-mounted)** |
+| **buttons[0]** | Thumbstick | Thumbstick | Touchpad | Inner Ring * | Touchpad * | Touchpad * | Touchpad *
+| **buttons[1]** | Select * | Trigger * | Trigger * | Back | Menu ** | Trigger |
+| **buttons[2]** | Grasp | Grip | Grips | Outer Ring - Up | System ** | |
+| **buttons[3]** | Menu | A/X | Menu | Outer Ring - Down | |
+| **buttons[4]** | Touchpad | B/Y | | Outer Ring - Left | |
+| **buttons[5]** | | Surface | | Outer Ring - Right | |
+| **buttons[6]** | | Menu | |
+| **axes[0]** | Thumbstick X | Thumbstick X | Touchpad X | | Touchpad X | Touchpad X |  Touchpad X |
+| **axes[1]** | Thumbstick Y | Thumbstick Y | Touchpad Y | | Trackpad Y | Touchpad Y |  Touchpad Y |
 | **axes[2]** | Touchpad X |
 | **axes[3]** | Touchpad Y |
-| **Touch "click"** | | | | | Click (to be removed) | Tap |
-| **Touch "scroll"** | | | | | | Drag |
 
 * __*__ _Primary Button_
 * __**__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
