@@ -136,12 +136,11 @@ Known controllers and their mappings:
 --- | --- | --- | --- |
 | **Control type** | **3DOF** | **3DOF** | **3DOF (Head-mounted)** |
 | **buttons[0]** | Touchpad * | Touchpad * | Touchpad * |
-| **buttons[1]** | Menu ** | Trigger |
+| **buttons[1]** | | Trigger |
 | **axes[0]** | Touchpad X | Touchpad X |  Touchpad X |
 | **axes[1]** | Touchpad Y | Touchpad Y |  Touchpad Y |
 
 * __*__ _Primary Button_
-* __**__ _Libraries on github have mapped this, but it doesn’t exist on the Gamepad Buttons array in Chrome on mobile._
 
 The easiest way for your experience to support all gamepads is to use a simple gaze-and-commit interaction style, listening for button presses in either index `0` or `1` for the commit. Remember to be careful with array size - the controller may not actually have more than 1 button! Also adding support for point-and-commit will gives users even more of a choice. Supporting both point-and-commit and gaze-and-commit gives users choice of input device.
 
