@@ -6,8 +6,6 @@ author: leweaver
 ms.author: leweaver
 ms.date: 07/11/2018
 ms.topic: landing-page
-ms.prod: microsoft-edge
-ms.technology: webvr
 keywords: developer guide
 ---
 
