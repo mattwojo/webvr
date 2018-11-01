@@ -5,8 +5,6 @@ author: GrantMeStrength
 ms.author: jken
 ms.date: 09/10/2017
 ms.topic: article
-ms.prod: microsoft-edge
-ms.technology: webvr
 keywords: WebVR Resources Links
 ---
 

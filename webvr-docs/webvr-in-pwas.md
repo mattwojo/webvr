@@ -5,8 +5,6 @@ author: eliotcowley
 ms.author: elcowle
 ms.date: 06/05/2018
 ms.topic: article
-ms.prod: microsoft-edge
-ms.technology: webvr
 keywords: WebVR, progressive web app, pwa
 ---
 

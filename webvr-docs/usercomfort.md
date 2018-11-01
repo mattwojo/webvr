@@ -5,8 +5,6 @@ author: leweaver
 ms.author: leweaver
 ms.date: 08/01/2017
 ms.topic: article
-ms.prod: microsoft-edge
-ms.technology: webvr
 keywords: user comfort
 ---
 
