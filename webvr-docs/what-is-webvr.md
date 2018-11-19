@@ -6,6 +6,7 @@ ms.author: elcowle
 ms.date: 06/20/2018
 ms.topic: article
 keywords: WebVR, Microsoft Edge
+ms.custom: RS5
 ---
 
 # What is WebVR?

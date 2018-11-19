@@ -6,6 +6,7 @@ ms.author: elcowle
 ms.date: 06/12/2018
 ms.topic: article
 keywords: WebVR, webview, uwp
+ms.custom: RS5
 ---
 
 # WebVR in WebView
