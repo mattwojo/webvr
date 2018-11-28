@@ -7,6 +7,7 @@ ms.author: leweaver
 ms.date: 07/11/2018
 ms.topic: landing-page
 keywords: developer guide
+ms.custom: RS5
 ---
 
 # WebVR Developer's Guide
@@ -94,9 +95,7 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
 </ul>
 
 ---
-
 <h2>More resources</h2>
-
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="//developer.microsoft.com/en-us/windows/mixed-reality">
@@ -153,7 +152,6 @@ Check out this [Babylon.js](//www.babylonjs.com/) sample in virtual reality once
         </a>
     </li>
   </ul>
-
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="//github.com/w3c/webvr/blob/master/explainer.md">

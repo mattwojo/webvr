@@ -6,6 +6,7 @@ ms.author: jken
 ms.date: 06/29/2018
 ms.topic: article
 keywords: WebVR demo sample
+ms.custom: RS5
 ---
 
 # WebVR demos
