@@ -48,6 +48,7 @@ Here are some links to useful resources and documentation regarding WebVR.
 
 * [WebVR Developers on LinkedIn](https://www.linkedin.com/groups/13500607/profile)
 * [Microsoft MR Community](https://developer.microsoft.com/en-us/windows/mixed-reality/community)
+* [WebXR Discord](https://discord.gg/Jt5tfaM)
 
 ## Video Resources
 
