@@ -1,8 +1,6 @@
 ---
 title: WebVR in Progressive Web Apps
 description: Learn how to add WebVR to your Progressive Web Apps.
-author: eliotcowley
-ms.author: elcowle
 ms.date: 06/05/2018
 ms.topic: article
 keywords: WebVR, progressive web app, pwa
@@ -11,9 +9,9 @@ ms.custom: RS5
 
 # WebVR in Progressive Web Apps
 
-As of the [Windows 10 April 2018 Update](https://blogs.windows.com/windowsexperience/2018/04/27/make-the-most-of-your-time-with-the-new-windows-10-update/) (version 1803, build 17134, [EdgeHTML 17](https://aka.ms/devguide_edgehtml_17)), WebVR is supported in [Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) (PWAs). PWAs combine the best of the web and native apps, allowing you to take your existing websites and publish them to the Microsoft Store as Windows 10 applications. By adding WebVR functionality to provide deeper, more immersive experiences, you can create PWAs that are exceptionally engaging.
+As of the [Windows 10 April 2018 Update](https://blogs.windows.com/windowsexperience/2018/04/27/make-the-most-of-your-time-with-the-new-windows-10-update/) (version 1803, build 17134, [EdgeHTML 17](/microsoft-edge/edgehtml/)), WebVR is supported in [Progressive Web Apps](/microsoft-edge/progressive-web-apps) (PWAs). PWAs combine the best of the web and native apps, allowing you to take your existing websites and publish them to the Microsoft Store as Windows 10 applications. By adding WebVR functionality to provide deeper, more immersive experiences, you can create PWAs that are exceptionally engaging.
 
-This article extends the tutorial in [Get started with Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started), and will show you how to add WebVR to your PWA (or other type of web app) using the Babylon.js library.
+This article extends the tutorial in [Get started with Progressive Web Apps](/microsoft-edge/progressive-web-apps/get-started), and will show you how to add WebVR to your PWA (or other type of web app) using the Babylon.js library.
 
 ## Add WebVR to a PWA with Babylon.js
 
@@ -23,8 +21,8 @@ Though you can use any web development IDE and framework you prefer, to follow a
 
 * [Visual Studio 2017](https://www.visualstudio.com/downloads/) (any edition&mdash;Community is free)
     * When installing, make sure to select the **Universal Windows Platform development** and **Node.js development** workloads. If you've already installed Visual Studio 2017, you can open the **Visual Studio Installer** and click **Modify** under your installation to install the workloads.
-* Either a **working PWA** (see [Get started with Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) for info on how to create one) or a **simple web app**. If you have neither of these, follow the next section to create one.
-* A [Windows Mixed Reality immersive headset](https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details)
+* Either a **working PWA** (see [Get started with Progressive Web Apps](/microsoft-edge/progressive-web-apps/get-started) for info on how to create one) or a **simple web app**. If you have neither of these, follow the next section to create one.
+* A [Windows Mixed Reality immersive headset](/windows/mixed-reality/immersive-headset-hardware-details)
 
 ### Create the web app
 
@@ -167,13 +165,13 @@ Now that we have a 3D Babylon.js experience working in our PWA, we can easily ad
 
 ## Going further
 
-Using WebVR together with the capabilities of a PWA can yield some great benefits. For example, you could use service workers to cache your Babylon.js script files for offline access. Additionally, access to WinRT APIs opens up many more possibilities, including using the [Windows.UI.Input.Spatial namespace](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial) and other MR-specific APIs.
+Using WebVR together with the capabilities of a PWA can yield some great benefits. For example, you could use service workers to cache your Babylon.js script files for offline access. Additionally, access to WinRT APIs opens up many more possibilities, including using the [Windows.UI.Input.Spatial namespace](/uwp/api/windows.ui.input.spatial) and other MR-specific APIs.
 
-Another benefit of Progressive Web Apps is that they can be published to the Microsoft Store, where they will have a potential audience the size of the entire Windows 10 install base. To learn more about publishing your PWA to the Store, see [Progressive Web Apps in the Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store).
+Another benefit of Progressive Web Apps is that they can be published to the Microsoft Store, where they will have a potential audience the size of the entire Windows 10 install base. To learn more about publishing your PWA to the Store, see [Progressive Web Apps in the Microsoft Store](/microsoft-edge/progressive-web-apps/microsoft-store).
 
 ## See also
 
 * [Babylon.js](https://www.babylonjs.com/)
 * [WebVR Developer's Guide](index.md)
-* [Progressive Web Apps on Windows](https://docs.microsoft.com/microsoft-edge/progressive-web-apps
+* [Progressive Web Apps on Windows](/microsoft-edge/progressive-web-apps
 )

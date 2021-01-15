@@ -1,14 +1,12 @@
-# WebVR Developers Guide
-TOC:
-- User Comfort
-- Input
-- WebVR Essentials
-
-Potential Additions:
-- Toolset
-- Javascript Gotcha's
+---
+title: WebVR User Experience
+description: Overview of WebVR user experience. 
+msdate: 07/11/2018
+ms.topic: article
+---
 
 # User Comfort
+
 The human body is very sensitive to various cues, including visual, auditory, touch etc. It uses all of these in combination to maintain a sense of orientation. If any of these senses reports something that the brain doesn't expect, the user will rapidly experience discomfort or nausea. A real world parallel is motion sickness, which in some cases can be completely dabilitating.
 
 Everybody is different - something that feels fine for you may cause crippling nausea for other people. A common experience in VR apps that can instantly cause nausea is in some people but not others is translation: using a thumbpad or WASD to 'walk'. Affected people will suffer within seconds - it is not only prolonged exposure that you need to worry about.
@@ -16,6 +14,7 @@ Everybody is different - something that feels fine for you may cause crippling n
 There is comprehensive must-read [comfort documentation](https://developer.microsoft.com/en-us/windows/mixed-reality/comfort) on the Windows Dev Center, however some of the important takeaways are summarized below:
 
 ## Assume all headsets are 6DOF
+
 Only some of the headsets on the market right now have sensors capable of reporting full [6DOF](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) motion, some have sensors that will only report head rotation. Sensor limitation does not prevent the device from making a guess about its location in space via neck modelling techniques, which users find [uncomfortable if omitted](https://www.reddit.com/r/oculus/comments/3uhs63/why_dont_all_gear_vr_apps_have_the_neck_model_its/).
 
 Omitting head position support will cause discomfort for users, especially when objects are rendered close to their head. By supporting the full six degrees of motion in your app, not only do you increase comfort for 3DOF headset users, you will get the benefit of full room scale support for free with devices that support it.
@@ -23,14 +22,14 @@ Omitting head position support will cause discomfort for users, especially when 
 360 video presents an interested exception to this case, since the camera itself was fixed in space when the video was recorded. The best practice here is to simply make the sphere/cube on which you project the video very large in space (say, 100x100m) so that any in-world UI elements you may add will respect head movement.
 
 ## Constant, high frame rate
-> __LW: Not happy with this section__
 
 One thing that is especially jarring for users and can cause extreme discomfort is a sudden pause in rendering. It is critical that the application draws to the headset at the hardware defined screen refresh rate. While a constant low frame rate is typically caused by expensive code in the `requestAnimationFrame` callback or GPU wait, a sudden stop in rendering is typically caused by blocking code in `requestAnimationFrame`, or a failure to queue another callback. 
 
 Extra caution will need to be taken if you perform loading or creation of assets within the render loop, while rendering to the headset. It is preferable to show a simple, dark loading screen consideration in the headset while expensive main thread operations take place.
 
 ## Focal Zone
-Placement of objects in the world with respect to the viewers focal point is also important for comfort. 
+
+Placement of objects in the world with respect to the viewers focal point is also important for comfort.
 
 To view objects clearly, humans must [accommodate](https://en.wikipedia.org/wiki/Accommodation_%28eye%29), or adjust their eyes’ focus, to the distance of the object. At the same time, the two eyes must [converge](https://en.wikipedia.org/wiki/Convergence_(eye)) to the object’s distance to avoid seeing double images. In natural viewing, vergence and accommodation are linked. When you view something near (e.g. a housefly close to your nose) your eyes cross and accommodate to a near point. Conversely, if you view something at infinity, your eyes’ lines of sight become parallel and the your eyes accommodates to infinity. In most head-mounted displays users will always accommodate to the focal distance of the display (to get a sharp image), but converge to the distance of the object of interest (to get a single image). When users accommodate and converge to different distances, the natural link between the two cues must be broken and this can lead to visual discomfort or fatigue.
 
@@ -53,7 +52,8 @@ __User interface__ elements in-world should be on the focal plane so as to maxim
 
 __Tracked controller__ 3D representations will often be closer to the user than the focal guidance above. Use best judgement - use the 3D controller models to assist with user awareness of where their hands are, rather than as an information display/HUD. The general guidance is that the application should maximise comfort for users - if neccisary fade the controllers to transparent if they are held closer than a 'cross eyes' distance or too close to the face. 
 
-# Input
+## Input
+
 Input is one of the toughest things to get right in VR, but is essential to creating a compelling interactive experience. Input is used to convert a cinematic experience into an compelling interactive one by allowing a user to alter the state of the world around them. Interaction could be as simple as playing/pausing a video by gazing at a button, to a complex drag action requiring two tracked controllers and multiple user steps.
 
 Right now in WebVR 1.1, a site should reasonably expect visitors to limited to using only one of the following input methods (their device or situation may prohibit use of any others)
@@ -68,9 +68,10 @@ Right now in WebVR 1.1, a site should reasonably expect visitors to limited to u
 I describe the best way to handle each in individual sections below, followed by a comprehensive example showing all input working together to provide a robust multi-platform input handler.
 
 ## Mouse
+
 Since a person wearing an HMD can’t actually see what they are doing with an unrestricted mouse, it would be very easy for them to accidently click on things they don’t intend to – the browser close button, other windows or the operating system interface. In a worst case this could potentially lead to things such as an accidental format of a hard drive! For this reason, Microsoft Edge disables unrestricted mouse input when an immersive VR session is started and the headset presence sensor is covered (you’ll see the Win+Alt+I banner visible on your monitor when this is the case). This is the behavior for all apps in Windows Mixed Reality and is not unique to WebVR.
 
-The safest way to handle mouse input when in an immersive WebVR session is to use the [pointerlock API](https://msdn.microsoft.com/en-us/library/mt560346.aspx). There are two events on the WebVR spec that are specifically designed to make this easy – they are fired at the appropriate times when the page enters VR, HMD presence sensor detects changes and any number of other reasons input focus would change: [vrdisplaypointerrestricted](https://msdn.microsoft.com/en-us/library/mt801974) and [vrdisplaypointerunrestricted](https://msdn.microsoft.com/en-us/library/mt801975) (also see the WebVR 1.1 spec [event descriptions](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event)). In response to the former you can request pointerlock to get mouse input.
+The safest way to handle mouse input when in an immersive WebVR session is to use the [pointerlock API](https://msdn.microsoft.com/en-us/library/mt560346.aspx). There are two events on the WebVR spec that are specifically designed to make this easy – they are fired at the appropriate times when the page enters VR, HMD presence sensor detects changes and any number of other reasons input focus would change: [vrdisplaypointerrestricted](/previous-versions//mt801974(v=vs.85)) and [vrdisplaypointerunrestricted](/previous-versions//mt801975(v=vs.85)) (also see the WebVR 1.1 spec [event descriptions](https://w3c.github.io/webvr/spec/1.1/#window-onvrdisplaypointerrestricted-event)). In response to the former you can request pointerlock to get mouse input.
 
 To remain compatible with browsers that do not fire those events, it is still a good idea to also request pointerlock just prior to calling requestPresent for the user safety reasons mentioned above. 
 
@@ -109,10 +110,8 @@ function tryRequestPresent() {
 }
 ```
 
-## Keyboard
-TODO: This section.
-
 ## Gamepad
+
 Traditional, 0DOF, 3DOF & 6DOF controllers are all exposed via the navigator.getGamepads() array. Since the specification does not state anything about a minimum or maximum length for the array, nor the order in which elements appear, it is safest to assume all browser vendors implement it differently (and guess what, they do!).
 
 It is especially important when dealing with gamepads to make no assumptions whatsoever on the type, ordering or number of devices that will be returned returned in the array. As an example, Windows Mixed Reality users may be using [motion controllers](https://developer.microsoft.com/en-us/windows/mixed-reality/motion_controllers) or a gamepad to navigate the browser in VR; they will expect those controllers to continue working once they enter a WebVR immersive session. 
@@ -131,7 +130,7 @@ else
 ```
 
 ### Controller buttons
-_TL;DR:_ 
+
 * There is a lot of variation between hardware
 * Supporting both [point-and-commit and gaze-and-commit](https://developer.microsoft.com/en-us/windows/mixed-reality/gestures#gaze-and-commit]) gives users choice of input device
 * Commit if gamepad buttons 0 or 1 are pressed _(check that the buttons exist)_
@@ -145,7 +144,7 @@ if (gamepad.mapping === 'standard') console.log(gamepad.id + ' is a traditional 
 
 Things get interesting with all of the VR Controllers since each one has different hardware configuration: number of buttons, thumbstick, touchpad etc. While there are no mappings defined in the specification for any of the VR controllers, we can base our approach on the knowledge that the [specification states](https://www.w3.org/TR/gamepad/#dfn-buttons): 
 
->  It is recommended that buttons appear in decreasing importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
+> It is recommended that buttons appear in decreasing importance such that the primary button, secondary button, tertiary button, and so on appear as elements 0, 1, 2, ... in the buttons array
 
 It is convention that the trigger on many 6DOF controllers is the primary, "most important" button, however controllers in WebVR 1.1 is always place the trigger at index 1 if it is present. Controllers that lack a trigger correctly place the "most important" button at index 0.
 
@@ -236,6 +235,7 @@ function tick() {
 # WebVR Essentials
 
 ## Inclusive Feature and Capability Detection
+
 When determining whether or not to enable your WebVR feature (as opposed to a fallback 2D screen rendered version), do so based on device capability rather than device name. This approach means compatible devices that reach the market after you code your site will "just work". Don't exclude things just because you haven't tested it yet.
 
 Just because the WebVR API is present in the browser doesn’t mean an HMD is plugged in. Browsers are in the process of rolling out the WebVR 1.1 standard in their stable branches right now, so assume that in the very near future, all users could potentially have the API present in their browser whether or not they have a headset or even know what VR is!
@@ -247,6 +247,7 @@ Don't make functional decisions based on meta data, such as the `VRDisplay.displ
 This is a great segue into...
 
 ## The Enter VR button
+
 The Enter VR button is a visual cue that your content can present to an external headset, so should be visible on systems that support the API, even no headset is plugged in. _Feature detection_ can be used to determine the visibility (and enabled state) of the button.
 
 The button should conform to the general visual conventions that have been adopted by many sites: an simple stencil image of some VR goggles, the words "Enter VR" are also common. The button itself should be accessible by keyboard tabbing and visually respond to being in focus.
@@ -261,7 +262,8 @@ The button should have one of 3 possible states:
 - __disabled__: Visible but greyed. Clicking will perform a no-op, or display a message directing the user to plug in a headset.
 - __hidden__: Invisible.
 
-The logic to determine which of these three states the button is in is summarized below, with some reference javascript code: 
+The logic to determine which of these three states the button is in is summarized below, with some reference javascript code:
+
 - If `navigator.getVRDisplays` method DOESN'T EXIST, hide the button.
 - If `navigator.getVRDisplays` method EXISTS, show the button
   - If calling the method returns 0 displays, disable the button.
@@ -286,6 +288,7 @@ function calculateButtonState() {
 ```
 
 ## Automatically entering VR when the page loads
+
 __Important:__ not all platforms support this. Always provide an Enter VR button as well.
 
 In browsers that do not require the page to call `requestPresent` from within the context of a user initiated action, it is possible to make the call at any time. Thus, to attempt to enter VR immedately, simply place a call to `requestPresent` after initialization completes.
@@ -302,7 +305,8 @@ function onEnterVRButtonPress() {
 }
 ```
 
-## Users may plug in their HMD after loading your website. 
+## Users may plug in their HMD after loading your website.
+
 If you are performing any logic whatsoever on page load that makes decisions based on the presence of a VRDisplay, such as enabling an Enter VR button, make sure you listen for the `window.onvrdisplayconnect` (and associated `window.onvrdisplaydisconnect`) events.
 
 The below example shows one possible usage of the `vrdisplayconnect` event, to enable the Enter VR button when a headset is connected after page load.

@@ -1,8 +1,6 @@
 ---
 title: Demos
 description: WebVR demo apps. 
-author: GrantMeStrength
-ms.author: jken
 ms.date: 06/29/2018
 ms.topic: article
 keywords: WebVR demo sample
@@ -99,6 +97,6 @@ If you don't have a VR headset, don't worry&mdash;these demos also work with the
 
 ## See more
 
-* [Your mixed reality home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
+* [Your mixed reality home](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Babylon.js](https://www.babylonjs.com/)
 * [WebVR with Microsoft Edge](webvr-with-edge.md)

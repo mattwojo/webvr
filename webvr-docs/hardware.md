@@ -1,8 +1,6 @@
 ---
 title: Hardware
 description: Hardware choices for WebVR development on Windows. 
-author: GrantMeStrength
-ms.author: jken
 ms.date: 11/29/2017
 ms.topic: article
 keywords: WebVR hardware
@@ -10,7 +8,7 @@ keywords: WebVR hardware
 
 # WebVR Hardware
 
-To view WebVR content on Microsft Edge, you use a Windows Mixed Reality headset. These headsets connect to the HDMI and USB ports of a compatible desktop or laptop computer running the Windows 10 Fall Creators Update.
+To view WebVR content on Microsoft Edge, you use a Windows Mixed Reality headset. These headsets connect to the HDMI and USB ports of a compatible desktop or laptop computer running the Windows 10 Fall Creators Update.
 
 
 ![Devices](img/windows-mr-headset.jpg)
