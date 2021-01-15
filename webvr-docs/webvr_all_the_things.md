@@ -1,3 +1,9 @@
+---
+title: WebVR User Experience
+description: Overview of WebVR user experience. 
+msdate: 07/11/2018
+ms.topic: article
+---
 
 # User Comfort
 
