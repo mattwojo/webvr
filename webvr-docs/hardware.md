@@ -1,8 +1,6 @@
 ---
 title: Hardware
 description: Hardware choices for WebVR development on Windows. 
-author: GrantMeStrength
-ms.author: jken
 ms.date: 11/29/2017
 ms.topic: article
 keywords: WebVR hardware

@@ -1,8 +1,6 @@
 ---
 title: WebVR Resources
 description: Resources and Links. 
-author: GrantMeStrength
-ms.author: jken
 ms.date: 09/10/2017
 ms.topic: article
 keywords: WebVR Resources Links

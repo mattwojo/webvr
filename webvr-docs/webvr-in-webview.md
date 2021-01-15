@@ -1,8 +1,6 @@
 ---
 title: WebVR in WebView
 description: Learn how to add WebVR to a WebView control.
-author: eliotcowley
-ms.author: elcowle
 ms.date: 06/12/2018
 ms.topic: article
 keywords: WebVR, webview, uwp

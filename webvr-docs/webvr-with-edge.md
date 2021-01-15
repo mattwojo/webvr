@@ -1,8 +1,6 @@
 ---
 title: WebVR with Microsoft Edge
 description: Introduction to using WebVR with the Microsoft Edge browser.
-author: mattwojo
-ms.author: mattwoj
 ms.date: 06/12/2018
 ms.topic: article
 keywords: WebVR, Microsoft Edge

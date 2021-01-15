@@ -1,8 +1,6 @@
 ---
 title: What is WebVR?
 description: Introduction to WebVR.
-author: eliotcowley
-ms.author: elcowle
 ms.date: 06/20/2018
 ms.topic: article
 keywords: WebVR, Microsoft Edge

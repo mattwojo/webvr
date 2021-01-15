@@ -2,8 +2,6 @@
 layout: LandingPage
 title: WebVR Developer's Guide
 description: Guide to working with WebVR in Mixed Reality experiences.
-author: leweaver
-ms.author: leweaver
 ms.date: 07/11/2018
 ms.topic: landing-page
 keywords: developer guide

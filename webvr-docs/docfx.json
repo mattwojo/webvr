@@ -37,7 +37,8 @@
       "keywords": "webvr, mixed reality, holographic, virtual reality, vr",
       "uhfHeaderId": "MSDocsHeader-MSEdge",
       "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/webvr"
+      "feedback_github_repo": "MicrosoftDocs/webvr",
+      "ms.author": "jken",
     },
     "fileMetadata": {},
     "template": [],

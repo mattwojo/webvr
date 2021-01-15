@@ -1,8 +1,6 @@
 ---
 title: WebVR in Progressive Web Apps
 description: Learn how to add WebVR to your Progressive Web Apps.
-author: eliotcowley
-ms.author: elcowle
 ms.date: 06/05/2018
 ms.topic: article
 keywords: WebVR, progressive web app, pwa
