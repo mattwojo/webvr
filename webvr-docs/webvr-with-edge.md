@@ -10,7 +10,7 @@ keywords: WebVR, Microsoft Edge
 
 # Using WebVR with Microsoft Edge
 
-The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or later) supports immersive 3D Virtual Reality (VR) applications on the web using the WebVR 1.1 JavaScript API. Viewing WebVR content requires a [Windows Mixed Reality headset](hardware.md), or the [Windows Mixed Reality Portal Simulator](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator) (accessible via Developer Mode).
+The Microsoft Edge browser (build 15002+ with the Windows 10 Creators Update or later) supports immersive 3D Virtual Reality (VR) applications on the web using the WebVR 1.1 JavaScript API. Viewing WebVR content requires a [Windows Mixed Reality headset](hardware.md), or the [Windows Mixed Reality Portal Simulator](/windows/mixed-reality/using-the-windows-mixed-reality-simulator) (accessible via Developer Mode).
 
 > [!Note]
 > To check which version of Microsoft Edge you currently have installed:
@@ -43,18 +43,18 @@ Additionally, you can now run WebVR inside WebView controls in Windows 10 apps. 
 
 ## Setting up your Mixed Reality headset
 
-If you have a Windows Mixed Reality headset, follow the [Immersive headset setup guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start) to get started. If you do not have a physical device, you can instead use the [Windows Mixed Reality simulator](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator) to develop and test your WebVR experience.
+If you have a Windows Mixed Reality headset, follow the [Immersive headset setup guide](/windows/mixed-reality/enthusiast-guide/before-you-start) to get started. If you do not have a physical device, you can instead use the [Windows Mixed Reality simulator](/windows/mixed-reality/using-the-windows-mixed-reality-simulator) to develop and test your WebVR experience.
 
-- Ensure you have a 64-bit version of Windows 10&mdash;[Check your compatibility](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
+- Ensure you have a 64-bit version of Windows 10&mdash;[Check your compatibility](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 - Ensure your Windows 10 installation is [up-to-date](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
-- [How to launch the Mixed Reality Portal](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/install-windows-mixed-reality)
-- [Connect your Headset](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/plug-in-your-headset) or [turn on Simulation](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-mixed-reality-simulator)
+- [How to launch the Mixed Reality Portal](/windows/mixed-reality/enthusiast-guide/install-windows-mixed-reality)
+- [Connect your Headset](/windows/mixed-reality/enthusiast-guide/plug-in-your-headset) or [turn on Simulation](/windows/mixed-reality/using-the-windows-mixed-reality-simulator)
 
 ### Additional resources
 
-- [Where can I buy a Windows Mixed Reality headset? + other FAQs](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-buy-faqs)
-- [How to set up Motion Controllers, Room Boundary, Speech](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality)
-- [Troubleshooting](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+- [Where can I buy a Windows Mixed Reality headset? + other FAQs](/windows/mixed-reality/enthusiast-guide/before-you-buy-faqs)
+- [How to set up Motion Controllers, Room Boundary, Speech](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality)
+- [Troubleshooting](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 
 ## Running WebVR on your Mixed Reality headset
 
