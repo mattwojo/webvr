@@ -3,7 +3,7 @@
 - name: WebVR
   items:
   - name: Overview
-    href: /microsoft-edge/webvr/archive/what-is-webvr.md
+    href: /archive/microsoft-edge/webvr/what-is-webvr.md
   - name: Hardware
     href: /archives/hardware.md
   - name: WebVR with Microsoft Edge
