@@ -1,22 +1,22 @@
 - name: WebVR Guide (archived)
-  href: /previous-versions/index.md
+  href: /archive/index.md
 - name: WebVR
   items:
   - name: Overview
-    href: /previous-versions/what-is-webvr.md
+    href: /archive/what-is-webvr.md
   - name: Hardware
-    href: /previous-versions/hardware.md
+    href: /archives/hardware.md
   - name: WebVR with Microsoft Edge
-    href: /previous-versions/webvr-with-edge.md
+    href: /archive/webvr-with-edge.md
   - name: WebVR Input
-    href: /previous-versions/input.md
+    href: /archive/input.md
   - name: WebVR in PWAs
-    href: /previous-versions/webvr-in-pwas.md
+    href: /archive/webvr-in-pwas.md
   - name: WebVR in WebView
-    href: /previous-versions/webvr-in-webview.md
+    href: /archive/webvr-in-webview.md
   - name: WebVR checklist
-    href: /previous-versions/essentials.md
+    href: /archive/essentials.md
   - name: WebVR resources
-    href: /previous-versions/resources.md
+    href: /archive/resources.md
   - name: WebVR demos
-    href: /previous-versions/demos.md
+    href: /archive/demos.md
