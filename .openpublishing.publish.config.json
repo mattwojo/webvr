@@ -1,30 +1,8 @@
 {
-  "docsets_to_publish": [
-    {
-      "docset_name": "webvr",
-      "build_source_folder": "webvr-docs",
-      "build_output_subfolder": "webvr",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "moniker_groups": [],
-      "version": 0
-    }
-  ],
+  "docsets_to_publish": [],
   "notification_subscribers": [],
-  "sync_notification_subscribers": null,
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "contribution_branch_mappings": null,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -33,11 +11,10 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": null,
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": null,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
-  "need_generate_pdf_url_template": false,
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  "need_generate_pdf_url_template": false
 }
